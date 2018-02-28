@@ -516,7 +516,7 @@ RunTable()
                 ;;
             esac
         fi
-        echo "The result of "${sTTitle1}" is "${sStatus1}
+        echo "The stat of "${sTTitle1}" is "${sStatus1}
 
         if [ x"${sStatus1}" = x"[Close]" ];then
             echo "The test have benn skip!"
