@@ -34,7 +34,7 @@
             "parameters": {
                 "testdef_repos": [
                     {
-                        "git-repo": "https://github.com/Luojiaxing1991/ci_job.git",
+                        "git-repo": "https://github.com/Luojiaxing1991/ci_autotest.git",
 			"parameters":{
 			     "Maintainer": "Luojiaxing"
 			},

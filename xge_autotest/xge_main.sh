@@ -58,21 +58,21 @@ function main()
 }
 
 #Output log file header
-#writeLogHeader
+writeLogHeader
 
 #ifconfig IP
-#init_net_ip
+init_net_ip
 
 #set passwd
-#setTrustRelation
+setTrustRelation
 
 #ifconfig net export
-#init_net_export
+init_net_export
 
 #performance init
-#perf_init
-echo "Start to run xge test"
-#main
+perf_init
+
+main
 
 # clean exit so lava-test can trust the results
 exit 0
