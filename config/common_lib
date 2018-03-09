@@ -177,10 +177,10 @@ function getIPofClientServer
 		
         sleep 10
         expect "Are you sure you want to continue connecting (yes/no)?"
-        set timeout 60
+        set timeout 120
         send "yes\r"
         expect -re ".*password:"
-        set timeout 60
+        set timeout 120
         send "$pass_word\r"
         expect eof
         exit 0
