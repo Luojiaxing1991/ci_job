@@ -65,6 +65,17 @@ function main()
 #Output log file header
 writeLogHeader
 
+#Xge test is only excute in 159 dash board
+#Find the local MAC
+tmpMAC=`ifconfig eth0 | grep "HWaddr" | awk '{print $NF}'`
+if [ x"${tmpMAC}" = x"${BOARD_159_MAC_ADDR}" ]
+then
+	echo "Xge test can be excute in this board!"
+else
+	echo "Xge test can not be excute in this board,exit!"
+	exit 0
+fi
+
 #ifconfig IP
 initLocalIP 
 LOCAL_IP=${COMMON_LOCAL_IP}
@@ -74,7 +85,7 @@ echo ${LOCAL_IP}
 
 getIPofClientServer ${DHCP_SERVER_MAC_ADDR} ${CLIENT_SERVER_MAC_ADDR} ${DHCP_SERVER_USER} ${DHCP_SERVER_PASS}
 
-if [ x"${COMMON_CLIENT_IP}" = x"" ]
+if [ x"${COMMON_CLIENT_IP}" = x"" ] || [ x"${COMMON_CLIENT_IP}" = x"0.0.0.0" ]
 then
 	echo "No found client IP,try ping default DHCP ip to update arp list!"
         ping ${COMMON_DEFAULT_DHCP_IP} -c 5
