@@ -27,11 +27,11 @@ PV-439	R.HNS.F006.A	ST_XGE_RESET_02		XGE光口大流量反复重新自协商成功	auto_negoti
 PV-442	R.HNS.F009.A	ST_GE_PHY_IOCTL_01	通过MiiTools读写ge phy寄存器	GE电口正确读取Phy寄存器	support_of_mdio.sh	ge_read_phy_register	on	
 PV-442	R.HNS.F009.A	ST_GE_PHY_IOCTL_02		GE电口正确写Phy寄存器	support_of_mdio.sh	ge_iperf_read_phy_register	off	
 PV-442	R.HNS.F009.A	ST_XGE_PHY_IOCTL_01		XGE光口读phy寄存器失败	support_of_mdio.sh	xge_read_phy_register	on	
-PV-443	R.HNS.F010.A	ST_GE_MAC_ERROR_01	GE网口MAC地址设置	GE网口Mac地址设置容错测试	support_to_change_mac_address.sh	ge_mac_address_fault_tolerant	on	
+PV-443	R.HNS.F010.A	ST_GE_MAC_ERROR_01	GE网口MAC地址设置	GE网口Mac地址设置容错测试	support_to_change_mac_address.sh	ge_mac_address_fault_tolerant	off	
 PV-443	R.HNS.F010.A	SET_GE_SET_MAC_01		GE标准mac地址设置成功	support_to_change_mac_address.sh	ge_set_standard_mac_address	on	
 PV-443	R.HNS.F010.A	SET_GE_SET_MAC_02		GE线性mac地址设置	support_to_change_mac_address.sh	ge_set_linear_mac_address	on	
 PV-443	R.HNS.F010.A	SET_GE_SET_MAC_03		GE电口初始化后mac地址随机生成	support_to_change_mac_address.sh	ge_mac_address_random_generation	on	
-PV-443	R.HNS.F010.A	ST_XGE_MAC_ERROR_01	XGE网口MAC地址设置	XGE网口Mac地址设置容错测试	support_to_change_mac_address.sh	xge_mac_address_fault_tolerant	on	
+PV-443	R.HNS.F010.A	ST_XGE_MAC_ERROR_01	XGE网口MAC地址设置	XGE网口Mac地址设置容错测试	support_to_change_mac_address.sh	xge_mac_address_fault_tolerant	off	
 PV-443	R.HNS.F010.A	SET_XGE_SET_MAC_01		XGE标准mac地址设置成功	support_to_change_mac_address.sh	xge_set_standard_mac_address	on	
 PV-443	R.HNS.F010.A	SET_XGE_SET_MAC_02		XGE线性mac地址设置	support_to_change_mac_address.sh	xge_set_linear_mac_address	on	
 PV-443	R.HNS.F010.A	SET_XGE_SET_MAC_03		XGE电口初始化后mac地址随机生成	support_to_change_mac_address.sh	xge_mac_address_random_generation	on	
