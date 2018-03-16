@@ -44,45 +44,45 @@ PV-1330	R.SAS.F025.A	ST.FUNC.047	RAS support	单bit ECC：SAS_HGC_IOMB_DQE_RAM0	su
 PV-1330	R.SAS.F025.A	ST.FUNC.048	RAS support	单bit ECC：SAS_HGC_IOMB_DQE_RAM1	support_ras.sh	1bit_ecc_inject0_en_2	on	
 PV-1330	R.SAS.F025.A	ST.FUNC.049	RAS support	单bit ECC：SAS_HGC_IOMB_DQE_RAM2	support_ras.sh	1bit_ecc_inject0_en_4	on	
 PV-1330	R.SAS.F025.A	ST.FUNC.050	RAS support	单bit ECC：SAS_HGC_IOMB_DQE_RAM3	support_ras.sh	1bit_ecc_inject0_en_8	on	
-PV-1330	R.SAS.F025.A	ST.FUNC.051	RAS support	单bit ECC：SAS_HGC_IOMB_CQE_RAM	support_ras.sh	1bit_ecc_inject0_en_10	on	
-PV-1330	R.SAS.F025.A	ST.FUNC.052	RAS support	单bit ECC：SAS_HGC_IOMB_IOST_RAM0	support_ras.sh	1bit_ecc_inject0_en_20	on	
-PV-1330	R.SAS.F025.A	ST.FUNC.053	RAS support	单bit ECC：SAS_HGC_IOMB_IOST_RAM1	support_ras.sh	1bit_ecc_inject0_en_40	on	
-PV-1330	R.SAS.F025.A	ST.FUNC.054	RAS support	单bit ECC：SAS_HGC_IOMB_IOST_RAM2	support_ras.sh	1bit_ecc_inject0_en_80	on	
-PV-1330	R.SAS.F025.A	ST.FUNC.055	RAS support	单bit ECC：SAS_HGC_IOMB_IOST_RAM3	support_ras.sh	1bit_ecc_inject0_en_100	on	
-PV-1330	R.SAS.F025.A	ST.FUNC.056	RAS support	单bit ECC：SAS_HGC_IOMB_ITCT_RAM0	support_ras.sh	1bit_ecc_inject0_en_200	on	
-PV-1330	R.SAS.F025.A	ST.FUNC.057	RAS support	单bit ECC：SAS_HGC_IOMB_ITCT_RAM1	support_ras.sh	1bit_ecc_inject0_en_400	on	
-PV-1330	R.SAS.F025.A	ST.FUNC.058	RAS support	单bit ECC：SAS_HGC_IOMB_ITCT_RAM2	support_ras.sh	1bit_ecc_inject0_en_800	on	
-PV-1330	R.SAS.F025.A	ST.FUNC.059	RAS support	单bit ECC：SAS_HGC_IOMB_ITCT_RAM3	support_ras.sh	1bit_ecc_inject0_en_1000	on	
-PV-1330	R.SAS.F025.A	ST.FUNC.060	RAS support	单bit ECC：RXM mem0	support_ras.sh	1bit_ecc_inject0_en_2000	on	
-PV-1330	R.SAS.F025.A	ST.FUNC.061	RAS support	单bit ECC：RXM mem1	support_ras.sh	1bit_ecc_inject0_en_4000	on	
-PV-1330	R.SAS.F025.A	ST.FUNC.062	RAS support	单bit ECC：RXM mem2	support_ras.sh	1bit_ecc_inject0_en_8000	on	
-PV-1330	R.SAS.F025.A	ST.FUNC.063	RAS support	单bit ECC：RXM mem3	support_ras.sh	1bit_ecc_inject0_en_10000	on	
-PV-1330	R.SAS.F025.A	ST.FUNC.064	RAS support	单bit ECC：LM ITCT表mem0	support_ras.sh	1bit_ecc_inject0_en_20000	on	
-PV-1330	R.SAS.F025.A	ST.FUNC.065	RAS support	单bit ECC：LM ITCT表mem1	support_ras.sh	1bit_ecc_inject0_en_40000	on	
-PV-1330	R.SAS.F025.A	ST.FUNC.066	RAS support	单bit ECC：LM ITCT表mem2	support_ras.sh	1bit_ecc_inject0_en_80000	on	
-PV-1330	R.SAS.F025.A	ST.FUNC.067	RAS support	单bit ECC：LM ITCT表mem3	support_ras.sh	1bit_ecc_inject0_en_100000	on	
-PV-1330	R.SAS.F025.A	ST.FUNC.068	RAS support	单bit ECC：LM IOST表mem0	support_ras.sh	1bit_ecc_inject0_en_200000	on	
-PV-1330	R.SAS.F025.A	ST.FUNC.069	RAS support	单bit ECC：LM IOST表mem1	support_ras.sh	1bit_ecc_inject0_en_400000	on	
-PV-1330	R.SAS.F025.A	ST.FUNC.070	RAS support	单bit ECC：LM IOST表mem2	support_ras.sh	1bit_ecc_inject0_en_800000	on	
-PV-1330	R.SAS.F025.A	ST.FUNC.071	RAS support	单bit ECC：LM IOST表mem3	support_ras.sh	1bit_ecc_inject0_en_1000000	on	
-PV-1330	R.SAS.F025.A	ST.FUNC.072	RAS support	单bit ECC：SAS_DMAC_TX_RAM 通道0	support_ras.sh	1bit_ecc_inject1_en_1	on	
-PV-1330	R.SAS.F025.A	ST.FUNC.073	RAS support	单bit ECC：SAS_DMAC_TX_RAM 通道1	support_ras.sh	1bit_ecc_inject1_en_4	on	
-PV-1330	R.SAS.F025.A	ST.FUNC.074	RAS support	单bit ECC：SAS_DMAC_TX_RAM 通道2	support_ras.sh	1bit_ecc_inject1_en_10	on	
-PV-1330	R.SAS.F025.A	ST.FUNC.075	RAS support	单bit ECC：SAS_DMAC_TX_RAM 通道3	support_ras.sh	1bit_ecc_inject1_en_40	on	
-PV-1330	R.SAS.F025.A	ST.FUNC.076	RAS support	单bit ECC：SAS_DMAC_TX_RAM 通道4	support_ras.sh	1bit_ecc_inject1_en_100	on	
-PV-1330	R.SAS.F025.A	ST.FUNC.077	RAS support	单bit ECC：SAS_DMAC_TX_RAM 通道5	support_ras.sh	1bit_ecc_inject1_en_400	on	
-PV-1330	R.SAS.F025.A	ST.FUNC.078	RAS support	单bit ECC：SAS_DMAC_TX_RAM 通道6	support_ras.sh	1bit_ecc_inject1_en_1000	on	
-PV-1330	R.SAS.F025.A	ST.FUNC.079	RAS support	单bit ECC：SAS_DMAC_TX_RAM 通道7	support_ras.sh	1bit_ecc_inject1_en_4000	on	
-PV-1330	R.SAS.F025.A	ST.FUNC.080	RAS support	单bit ECC：SAS_DMAC_TX_RAM 通道8	support_ras.sh	1bit_ecc_inject1_en_10000	on	
-PV-1330	R.SAS.F025.A	ST.FUNC.081	RAS support	双bit ECC：SAS_DMAC_RX_RAM 通道0	support_ras.sh	2bit_ecc_injection_2	on	
-PV-1330	R.SAS.F025.A	ST.FUNC.082	RAS support	双bit ECC：SAS_DMAC_RX_RAM 通道1	support_ras.sh	2bit_ecc_injection_8	on	
-PV-1330	R.SAS.F025.A	ST.FUNC.083	RAS support	双bit ECC：SAS_DMAC_RX_RAM 通道2	support_ras.sh	2bit_ecc_injection_20	on	
-PV-1330	R.SAS.F025.A	ST.FUNC.084	RAS support	双bit ECC：SAS_DMAC_RX_RAM 通道3	support_ras.sh	2bit_ecc_injection_80	on	
-PV-1330	R.SAS.F025.A	ST.FUNC.085	RAS support	双bit ECC：SAS_DMAC_RX_RAM 通道4	support_ras.sh	2bit_ecc_injection_200	on	
-PV-1330	R.SAS.F025.A	ST.FUNC.086	RAS support	双bit ECC：SAS_DMAC_RX_RAM 通道5	support_ras.sh	2bit_ecc_injection_800	on	
-PV-1330	R.SAS.F025.A	ST.FUNC.087	RAS support	双bit ECC：SAS_DMAC_RX_RAM 通道6	support_ras.sh	2bit_ecc_injection_2000	on	
-PV-1330	R.SAS.F025.A	ST.FUNC.088	RAS support	双bit ECC：SAS_DMAC_RX_RAM 通道7	support_ras.sh	2bit_ecc_injection_8000	on	
-PV-1330	R.SAS.F025.A	ST.FUNC.089	RAS support	双bit ECC：SAS_DMAC_RX_RAM 通道8	support_ras.sh	2bit_ecc_injection_20000	on	
+PV-1330	R.SAS.F025.A	ST.FUNC.051	RAS support	单bit ECC：SAS_HGC_IOMB_CQE_RAM	support_ras.sh	1bit_ecc_inject0_en_10	off	
+PV-1330	R.SAS.F025.A	ST.FUNC.052	RAS support	单bit ECC：SAS_HGC_IOMB_IOST_RAM0	support_ras.sh	1bit_ecc_inject0_en_20	off	
+PV-1330	R.SAS.F025.A	ST.FUNC.053	RAS support	单bit ECC：SAS_HGC_IOMB_IOST_RAM1	support_ras.sh	1bit_ecc_inject0_en_40	off	
+PV-1330	R.SAS.F025.A	ST.FUNC.054	RAS support	单bit ECC：SAS_HGC_IOMB_IOST_RAM2	support_ras.sh	1bit_ecc_inject0_en_80	off	
+PV-1330	R.SAS.F025.A	ST.FUNC.055	RAS support	单bit ECC：SAS_HGC_IOMB_IOST_RAM3	support_ras.sh	1bit_ecc_inject0_en_100	off	
+PV-1330	R.SAS.F025.A	ST.FUNC.056	RAS support	单bit ECC：SAS_HGC_IOMB_ITCT_RAM0	support_ras.sh	1bit_ecc_inject0_en_200	off	
+PV-1330	R.SAS.F025.A	ST.FUNC.057	RAS support	单bit ECC：SAS_HGC_IOMB_ITCT_RAM1	support_ras.sh	1bit_ecc_inject0_en_400	off	
+PV-1330	R.SAS.F025.A	ST.FUNC.058	RAS support	单bit ECC：SAS_HGC_IOMB_ITCT_RAM2	support_ras.sh	1bit_ecc_inject0_en_800	off	
+PV-1330	R.SAS.F025.A	ST.FUNC.059	RAS support	单bit ECC：SAS_HGC_IOMB_ITCT_RAM3	support_ras.sh	1bit_ecc_inject0_en_1000	off	
+PV-1330	R.SAS.F025.A	ST.FUNC.060	RAS support	单bit ECC：RXM mem0	support_ras.sh	1bit_ecc_inject0_en_2000	off	
+PV-1330	R.SAS.F025.A	ST.FUNC.061	RAS support	单bit ECC：RXM mem1	support_ras.sh	1bit_ecc_inject0_en_4000	off	
+PV-1330	R.SAS.F025.A	ST.FUNC.062	RAS support	单bit ECC：RXM mem2	support_ras.sh	1bit_ecc_inject0_en_8000	off	
+PV-1330	R.SAS.F025.A	ST.FUNC.063	RAS support	单bit ECC：RXM mem3	support_ras.sh	1bit_ecc_inject0_en_10000	off	
+PV-1330	R.SAS.F025.A	ST.FUNC.064	RAS support	单bit ECC：LM ITCT表mem0	support_ras.sh	1bit_ecc_inject0_en_20000	off	
+PV-1330	R.SAS.F025.A	ST.FUNC.065	RAS support	单bit ECC：LM ITCT表mem1	support_ras.sh	1bit_ecc_inject0_en_40000	off	
+PV-1330	R.SAS.F025.A	ST.FUNC.066	RAS support	单bit ECC：LM ITCT表mem2	support_ras.sh	1bit_ecc_inject0_en_80000	off	
+PV-1330	R.SAS.F025.A	ST.FUNC.067	RAS support	单bit ECC：LM ITCT表mem3	support_ras.sh	1bit_ecc_inject0_en_100000	off	
+PV-1330	R.SAS.F025.A	ST.FUNC.068	RAS support	单bit ECC：LM IOST表mem0	support_ras.sh	1bit_ecc_inject0_en_200000	off	
+PV-1330	R.SAS.F025.A	ST.FUNC.069	RAS support	单bit ECC：LM IOST表mem1	support_ras.sh	1bit_ecc_inject0_en_400000	off	
+PV-1330	R.SAS.F025.A	ST.FUNC.070	RAS support	单bit ECC：LM IOST表mem2	support_ras.sh	1bit_ecc_inject0_en_800000	off	
+PV-1330	R.SAS.F025.A	ST.FUNC.071	RAS support	单bit ECC：LM IOST表mem3	support_ras.sh	1bit_ecc_inject0_en_1000000	off	
+PV-1330	R.SAS.F025.A	ST.FUNC.072	RAS support	单bit ECC：SAS_DMAC_TX_RAM 通道0	support_ras.sh	1bit_ecc_inject1_en_1	off	
+PV-1330	R.SAS.F025.A	ST.FUNC.073	RAS support	单bit ECC：SAS_DMAC_TX_RAM 通道1	support_ras.sh	1bit_ecc_inject1_en_4	off	
+PV-1330	R.SAS.F025.A	ST.FUNC.074	RAS support	单bit ECC：SAS_DMAC_TX_RAM 通道2	support_ras.sh	1bit_ecc_inject1_en_10	off	
+PV-1330	R.SAS.F025.A	ST.FUNC.075	RAS support	单bit ECC：SAS_DMAC_TX_RAM 通道3	support_ras.sh	1bit_ecc_inject1_en_40	off	
+PV-1330	R.SAS.F025.A	ST.FUNC.076	RAS support	单bit ECC：SAS_DMAC_TX_RAM 通道4	support_ras.sh	1bit_ecc_inject1_en_100	off	
+PV-1330	R.SAS.F025.A	ST.FUNC.077	RAS support	单bit ECC：SAS_DMAC_TX_RAM 通道5	support_ras.sh	1bit_ecc_inject1_en_400	off	
+PV-1330	R.SAS.F025.A	ST.FUNC.078	RAS support	单bit ECC：SAS_DMAC_TX_RAM 通道6	support_ras.sh	1bit_ecc_inject1_en_1000	off	
+PV-1330	R.SAS.F025.A	ST.FUNC.079	RAS support	单bit ECC：SAS_DMAC_TX_RAM 通道7	support_ras.sh	1bit_ecc_inject1_en_4000	off	
+PV-1330	R.SAS.F025.A	ST.FUNC.080	RAS support	单bit ECC：SAS_DMAC_TX_RAM 通道8	support_ras.sh	1bit_ecc_inject1_en_10000	off	
+PV-1330	R.SAS.F025.A	ST.FUNC.081	RAS support	双bit ECC：SAS_DMAC_RX_RAM 通道0	support_ras.sh	2bit_ecc_injection_2	off	
+PV-1330	R.SAS.F025.A	ST.FUNC.082	RAS support	双bit ECC：SAS_DMAC_RX_RAM 通道1	support_ras.sh	2bit_ecc_injection_8	off	
+PV-1330	R.SAS.F025.A	ST.FUNC.083	RAS support	双bit ECC：SAS_DMAC_RX_RAM 通道2	support_ras.sh	2bit_ecc_injection_20	off	
+PV-1330	R.SAS.F025.A	ST.FUNC.084	RAS support	双bit ECC：SAS_DMAC_RX_RAM 通道3	support_ras.sh	2bit_ecc_injection_80	off	
+PV-1330	R.SAS.F025.A	ST.FUNC.085	RAS support	双bit ECC：SAS_DMAC_RX_RAM 通道4	support_ras.sh	2bit_ecc_injection_200	off	
+PV-1330	R.SAS.F025.A	ST.FUNC.086	RAS support	双bit ECC：SAS_DMAC_RX_RAM 通道5	support_ras.sh	2bit_ecc_injection_800	off	
+PV-1330	R.SAS.F025.A	ST.FUNC.087	RAS support	双bit ECC：SAS_DMAC_RX_RAM 通道6	support_ras.sh	2bit_ecc_injection_2000	off	
+PV-1330	R.SAS.F025.A	ST.FUNC.088	RAS support	双bit ECC：SAS_DMAC_RX_RAM 通道7	support_ras.sh	2bit_ecc_injection_8000	off	
+PV-1330	R.SAS.F025.A	ST.FUNC.089	RAS support	双bit ECC：SAS_DMAC_RX_RAM 通道8	support_ras.sh	2bit_ecc_injection_20000	off	
 PV-1601	R.SAS.F010.A	ST.FUNC.090	Support full SAS function on all available PHYs	SAS盘，直连，开关近端PHY	support_full_sas_function_all_available_phys.sh	devmem_switch_all_phy	off	
 PV-1601	R.SAS.F010.A	ST.FUNC.091	Support full SAS function on all available PHYs	SATA盘，直连，开关近端PHY	support_full_sas_function_all_available_phys.sh	devmem_switch_all_phy	off	
 PV-1601	R.SAS.F010.A	ST.FUNC.092	Support full SAS function on all available PHYs	SAS盘，直连，hard_reset	support_full_sas_function_all_available_phys.sh	cycle_hard_reset_phy	on	
