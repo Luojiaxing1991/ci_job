@@ -1,0 +1,8 @@
+start_id=22, end_id=22 
+---------test_case_022: mr-write start--------
+test file name: test/server_socket2_79
+hr_qp->port_num= 0x1
+----------------------------------------
+test 0(write) res is 0 
+//--test case success!--//
+clean test case success!

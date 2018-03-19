@@ -2,20 +2,20 @@ port=18515,servername:(null)!
 
  [prtest_init_connection : 341] !
  [prtest_init_connection : 350] SERVER connection start!
- [main : 20849] prtest_init_connection ok!
- [main : 20857] pr_socket : name (null), port 18515, machine 0, sockfd 4
- [main : 20868] prtest_find_prdev ok!
- [main : 20885] ibv_open_device ok! Link type is Ethernet
+ [main : 20865] prtest_init_connection ok!
+ [main : 20873] pr_socket : name (null), port 18515, machine 0, sockfd 4
+ [main : 20884] prtest_find_prdev ok!
+ [main : 20901] ibv_open_device ok! Link type is Ethernet
 
  loop 0********************************* Mtu : 256
 
  set mtu ok.
  alloc pd ok.
- addr = 0xffffb676e010,lkey = rkey = 0x700
- addr = 0xffffb686e010,lkey = rkey = 0x800
+ addr = 0xffffa5ba3010,lkey = rkey = 0x500
+ addr = 0xffffa5ca3010,lkey = rkey = 0x600
  create recv cq ok.
  create send cq ok.
- create qp ok.hr_qp->port_num= 0x2
+ create qp ok.hr_qp->port_num= 0x1
 
  modify qp init ok.
  set up connection ok.
@@ -26,11 +26,11 @@ port=18515,servername:(null)!
 
  set mtu ok.
  alloc pd ok.
- addr = 0xffffb656d010,lkey = rkey = 0x900
- addr = 0xffffb666d010,lkey = rkey = 0xa00
+ addr = 0xffffa59a2010,lkey = rkey = 0x700
+ addr = 0xffffa5aa2010,lkey = rkey = 0x800
  create recv cq ok.
  create send cq ok.
- create qp ok.hr_qp->port_num= 0x2
+ create qp ok.hr_qp->port_num= 0x1
 
  modify qp init ok.
  set up connection ok.
@@ -41,11 +41,11 @@ port=18515,servername:(null)!
 
  set mtu ok.
  alloc pd ok.
- addr = 0xffffb636c010,lkey = rkey = 0xb00
- addr = 0xffffb646c010,lkey = rkey = 0xc00
+ addr = 0xffffa57a1010,lkey = rkey = 0x900
+ addr = 0xffffa58a1010,lkey = rkey = 0xa00
  create recv cq ok.
  create send cq ok.
- create qp ok.hr_qp->port_num= 0x2
+ create qp ok.hr_qp->port_num= 0x1
 
  modify qp init ok.
  set up connection ok.
@@ -58,11 +58,11 @@ Changing to active mtu
 
  set mtu ok.
  alloc pd ok.
- addr = 0xffffb616b010,lkey = rkey = 0xd00
- addr = 0xffffb626b010,lkey = rkey = 0xe00
+ addr = 0xffffa55a0010,lkey = rkey = 0xb00
+ addr = 0xffffa56a0010,lkey = rkey = 0xc00
  create recv cq ok.
  create send cq ok.
- create qp ok.hr_qp->port_num= 0x2
+ create qp ok.hr_qp->port_num= 0x1
 
  modify qp init ok.
  set up connection ok.
@@ -73,11 +73,11 @@ Changing to active mtu
 
  set mtu ok.
  alloc pd ok.
- addr = 0xffffb5f6a010,lkey = rkey = 0xf00
- addr = 0xffffb606a010,lkey = rkey = 0x1000
+ addr = 0xffffa539f010,lkey = rkey = 0xd00
+ addr = 0xffffa549f010,lkey = rkey = 0xe00
  create recv cq ok.
  create send cq ok.
- create qp ok.hr_qp->port_num= 0x2
+ create qp ok.hr_qp->port_num= 0x1
 
  modify qp init ok.
  set up connection ok.
@@ -88,11 +88,11 @@ Changing to active mtu
 
  set mtu ok.
  alloc pd ok.
- addr = 0xffffb5d69010,lkey = rkey = 0x1100
- addr = 0xffffb5e69010,lkey = rkey = 0x1200
+ addr = 0xffffa519e010,lkey = rkey = 0xf00
+ addr = 0xffffa529e010,lkey = rkey = 0x1000
  create recv cq ok.
  create send cq ok.
- create qp ok.hr_qp->port_num= 0x2
+ create qp ok.hr_qp->port_num= 0x1
 
  modify qp init ok.
  set up connection ok.
@@ -103,11 +103,11 @@ Changing to active mtu
 
  set mtu ok.
  alloc pd ok.
- addr = 0xffffb5b68010,lkey = rkey = 0x1300
- addr = 0xffffb5c68010,lkey = rkey = 0x1400
+ addr = 0xffffa4f9d010,lkey = rkey = 0x1100
+ addr = 0xffffa509d010,lkey = rkey = 0x1200
  create recv cq ok.
  create send cq ok.
- create qp ok.hr_qp->port_num= 0x2
+ create qp ok.hr_qp->port_num= 0x1
 
  modify qp init ok.
  set up connection ok.
@@ -120,11 +120,11 @@ Changing to active mtu
 
  set mtu ok.
  alloc pd ok.
- addr = 0xffffb5967010,lkey = rkey = 0x1500
- addr = 0xffffb5a67010,lkey = rkey = 0x1600
+ addr = 0xffffa4d9c010,lkey = rkey = 0x1300
+ addr = 0xffffa4e9c010,lkey = rkey = 0x1400
  create recv cq ok.
  create send cq ok.
- create qp ok.hr_qp->port_num= 0x2
+ create qp ok.hr_qp->port_num= 0x1
 
  modify qp init ok.
  set up connection ok.
@@ -132,7 +132,7 @@ Changing to active mtu
  modify qp rts ok.
  shake hand ok.
  loop end*********************************
- send_wr = 0x33b5d258, recv_wr = 0x33b5d228
+ send_wr = 0x303d9258, recv_wr = 0x303d9228
  qp 0, test 0, data_len= 0x0
  qp 1, test 0, data_len= 0x0
  qp 2, test 0, data_len= 0x0
@@ -172,4 +172,4 @@ Changing to active mtu
  qp 4, test 4, data_len= 0x21
  qp 5, test 4, data_len= 0x21
  qp 6, test 4, data_len= 0x21
- qp 7, test 4, data_len= 0x21######### total: 41  , pass: 1  , failed :0   ############
+ qp 7, test 4, data_len= 0x21######### total: 40  , pass: 1  , failed :0   ############

@@ -1,46 +1,33 @@
 Designed Requirement ID	Test Case ID	Test Item	Test Case Title	Automated scripts	Realize the function	Switch	Result	Reason
-PV-1587	R.SAS.F001.A	ST.FUNC.001	The driver must support SSP	SAS盘，直连，混合命令测试	driver_must_support.sh	driver_supports	on	FAIL	dd tools read /dev/sda4 error.
+PV-1587	R.SAS.F001.A	ST.FUNC.001	The driver must support SSP	SAS盘，直连，混合命令测试	driver_must_support.sh	driver_supports	on	PASS
 PV-1588	R.SAS.F002.A	ST.FUNC.002	The driver must support SMP	SAS盘，expander，混合命令测试	driver_must_support.sh	driver_supports	on	PASS
-PV-1589	R.SAS.F003.A	ST.FUNC.003	The driver must support STP	SATA盘，expander，混合命令测试	driver_must_support.sh	driver_supports	on	FAIL	dd tools read /dev/sda4 error.
+PV-1589	R.SAS.F003.A	ST.FUNC.003	The driver must support STP	SATA盘，expander，混合命令测试	driver_must_support.sh	driver_supports	on	PASS
 PV-1945	R.SAS.F004.A	ST.FUNC.004	Support Max Devices	SAS盘，SATA盘，expander，满载符合测试	support_max_devices.sh	support_max_devices	off	BLOCK	no automated use cases were implemented.
-PV-1604	R.SAS.F007.A	ST.FUNC.005	Support 12Gbit/s physical data rate	SAS盘，直连，速率协商测试(1.5Gbit/s, 3Gbit/s, 6Gbit/s, 12Gbits)	physical_data_rate.sh	disk_negotiated_link_rate_query	off	BLOCK	no automated use cases were implemented.
-PV-1597	R.SAS.F006.A	ST.FUNC.006	6Gbit/s physical data rate	SATA盘，直连，速率协商测试(1.5Gbit/s, 3Gbit/s, 6Gbit/s)	physical_data_rate.sh	disk_negotiated_link_rate_query	off	BLOCK	no automated use cases were implemented.
+PV-1604	R.SAS.F007.A	ST.FUNC.005	Support 12Gbit/s physical data rate	SAS盘，直连，速率协商测试(1.5Gbit/s, 3Gbit/s, 6Gbit/s, 12Gbits)	physical_data_rate.sh	disk_negotiated_link_rate_query	on	PASS
+PV-1597	R.SAS.F006.A	ST.FUNC.006	6Gbit/s physical data rate	SATA盘，直连，速率协商测试(1.5Gbit/s, 3Gbit/s, 6Gbit/s)	physical_data_rate.sh	disk_negotiated_link_rate_query	on	PASS
 PV-1603	R.SAS.F017.A	ST.FUNC.007	PHY control through sysfs	SAS盘，直连，支持速率设置	phy_control_through_sysfs.sh	rate_set_up	off	BLOCK	the current environment expander network, do not execute test cases.
 PV-1603	R.SAS.F017.A	ST.FUNC.008	PHY control through sysfs	SATA盘，直连，支持速率设置	phy_control_through_sysfs.sh	rate_set_up	off	BLOCK	the current environment expander network, do not execute test cases.
 PV-1603	R.SAS.F017.A	ST.FUNC.009	PHY control through sysfs	SAS/SATA盘，直连，支持重复速率设置	phy_control_through_sysfs.sh	loop_rate_set_up	off	BLOCK	the current environment expander network, do not execute test cases.
-#N/A	R.SAS.N005.A	ST.FUNC.014	 No cable unplug OOPs	SAS盘，直连，长时间速率数据传输	no_cable_unplug_oops.sh	loog_time_IO_read_write	off	BLOCK	no automated use cases were implemented.
-#N/A	R.SAS.N005.A	ST.FUNC.015	 No cable unplug OOPs	SAS盘，直连，反复读写磁盘	no_cable_unplug_oops.sh	repeat_IO_read_write	off	BLOCK	no automated use cases were implemented.
-#N/A	R.SAS.N005.A	ST.FUNC.016	 No cable unplug OOPs	SAS盘，直连，数据一致性测试	no_cable_unplug_oops.sh	disk_file_data_consistency_test	off	BLOCK	no automated use cases were implemented.
+#N/A	R.SAS.N005.A	ST.FUNC.014	 No cable unplug OOPs	SAS盘，直连，长时间速率数据传输	no_cable_unplug_oops.sh	loog_time_IO_read_write	on	PASS
+#N/A	R.SAS.N005.A	ST.FUNC.015	 No cable unplug OOPs	SAS盘，直连，反复读写磁盘	no_cable_unplug_oops.sh	repeat_IO_read_write	on	PASS
+#N/A	R.SAS.N005.A	ST.FUNC.016	 No cable unplug OOPs	SAS盘，直连，数据一致性测试	no_cable_unplug_oops.sh	disk_file_data_consistency_test	on	PASS
 PV-1612	R.SAS.N007.A	ST.FUNC.017	Stable 2GB file transfer	SAS盘，直连，数据稳定性测试	stable_2GB_file_transfer.sh	iozne_file_transfer_stability_test	off	BLOCK	no automated use cases were implemented.
-PV-1725	R.SAS.N004.A	ST.FUNC.018	SAS 3.0	SAS盘，直连，大IO读写（4M）	support_available_sas_cores.sh	FIO_IO_read_write	off	BLOCK	no automated use cases were implemented.
-PV-1725	R.SAS.N004.A	ST.FUNC.019	SAS 3.0	SAS盘，直连，小IO读写（512B）	support_available_sas_cores.sh	FIO_IO_read_write	off	BLOCK	no automated use cases were implemented.
-#N/A	R.SAS.N005.A	ST.FUNC.020	 No cable unplug OOPs	SATA盘，直连，长时间速率数据传输	no_cable_unplug_oops.sh	loog_time_IO_read_write	off	BLOCK	no automated use cases were implemented.
-#N/A	R.SAS.N005.A	ST.FUNC.021	 No cable unplug OOPs	SATA盘，直连，反复读写磁盘	no_cable_unplug_oops.sh	repeat_IO_read_write	off	BLOCK	no automated use cases were implemented.
-#N/A	R.SAS.N005.A	ST.FUNC.022	 No cable unplug OOPs	SATA盘，直连，数据一致性测试	no_cable_unplug_oops.sh	disk_file_data_consistency_test	off	BLOCK	no automated use cases were implemented.
+PV-1725	R.SAS.N004.A	ST.FUNC.018	SAS 3.0	SAS盘，直连，大IO读写（4M）	support_available_sas_cores.sh	FIO_IO_read_write	on	PASS
+PV-1725	R.SAS.N004.A	ST.FUNC.019	SAS 3.0	SAS盘，直连，小IO读写（512B）	support_available_sas_cores.sh	FIO_IO_read_write	on	PASS
+#N/A	R.SAS.N005.A	ST.FUNC.020	 No cable unplug OOPs	SATA盘，直连，长时间速率数据传输	no_cable_unplug_oops.sh	loog_time_IO_read_write	on	PASS
+#N/A	R.SAS.N005.A	ST.FUNC.021	 No cable unplug OOPs	SATA盘，直连，反复读写磁盘	no_cable_unplug_oops.sh	repeat_IO_read_write	on	PASS
+#N/A	R.SAS.N005.A	ST.FUNC.022	 No cable unplug OOPs	SATA盘，直连，数据一致性测试	no_cable_unplug_oops.sh	disk_file_data_consistency_test	on	PASS
 PV-1612	R.SAS.N007.A	ST.FUNC.023	Stable 2GB file transfer	SATA盘，直连，数据稳定性测试	stable_2GB_file_transfer.sh	iozne_file_transfer_stability_test	off	BLOCK	no automated use cases were implemented.
-PV-1724	R.SAS.N003.A	ST.FUNC.024	SAS 2.0	SATA盘，直连，大IO读写（4M）	support_available_sas_cores.sh	FIO_IO_read_write	off	BLOCK	no automated use cases were implemented.
-PV-1724	R.SAS.N003.A	ST.FUNC.025	SAS 2.0	SATA盘，直连，小IO读写（512B）	support_available_sas_cores.sh	FIO_IO_read_write	off	BLOCK	no automated use cases were implemented.
-#N/A	R.SAS.N005.A	ST.FUNC.026	 No cable unplug OOPs	SAS盘，expander，长时间速率数据传输	no_cable_unplug_oops.sh	loog_time_IO_read_write	off	BLOCK	no automated use cases were implemented.
-#N/A	R.SAS.N005.A	ST.FUNC.027	 No cable unplug OOPs	SAS盘，expander，反复读写磁盘	no_cable_unplug_oops.sh	repeat_IO_read_write	off	BLOCK	no automated use cases were implemented.
-PV-1725	R.SAS.N004.A	ST.FUNC.028	SAS 3.0	SAS盘，expander，大IO读写（4M）	support_available_sas_cores.sh	FIO_IO_read_write	off	BLOCK	no automated use cases were implemented.
-PV-1725	R.SAS.N004.A	ST.FUNC.029	SAS 3.0	SAS盘，expander，小IO读写（512B）	support_available_sas_cores.sh	FIO_IO_read_write	off	BLOCK	no automated use cases were implemented.
-#N/A	R.SAS.N005.A	ST.FUNC.030	 No cable unplug OOPs	SAS盘，expander，数据一致性测试	no_cable_unplug_oops.sh	disk_file_data_consistency_test	off	BLOCK	no automated use cases were implemented.
+PV-1724	R.SAS.N003.A	ST.FUNC.024	SAS 2.0	SATA盘，直连，大IO读写（4M）	support_available_sas_cores.sh	FIO_IO_read_write	on	PASS
+PV-1724	R.SAS.N003.A	ST.FUNC.025	SAS 2.0	SATA盘，直连，小IO读写（512B）	support_available_sas_cores.sh	FIO_IO_read_write	on	PASS
+#N/A	R.SAS.N005.A	ST.FUNC.026	 No cable unplug OOPs	SAS盘，expander，长时间速率数据传输	no_cable_unplug_oops.sh	loog_time_IO_read_write	on	PASS
+#N/A	R.SAS.N005.A	ST.FUNC.027	 No cable unplug OOPs	SAS盘，expander，反复读写磁盘	no_cable_unplug_oops.sh	repeat_IO_read_write	on	PASS
+PV-1725	R.SAS.N004.A	ST.FUNC.028	SAS 3.0	SAS盘，expander，大IO读写（4M）	support_available_sas_cores.sh	FIO_IO_read_write	on	PASS
+PV-1725	R.SAS.N004.A	ST.FUNC.029	SAS 3.0	SAS盘，expander，小IO读写（512B）	support_available_sas_cores.sh	FIO_IO_read_write	on	PASS
+#N/A	R.SAS.N005.A	ST.FUNC.030	 No cable unplug OOPs	SAS盘，expander，数据一致性测试	no_cable_unplug_oops.sh	disk_file_data_consistency_test	on	PASS
 PV-1612	R.SAS.N007.A	ST.FUNC.031	Stable 2GB file transfer	SAS盘，expander，传输稳定性测试	stable_2GB_file_transfer.sh	iozne_file_transfer_stability_test	off	BLOCK	no automated use cases were implemented.
-PV-1593	R.SAS.N001.A	ST.FUNC.032	The driver should support 700KIOPS per controller	SAS盘，expander，700KIOPS高性能测(4KB)	support_700k_iops.sh	fio_iops_controller	off	BLOCK	no automated use cases were implemented.
-#N/A	R.SAS.N005.A	ST.FUNC.033	 No cable unplug OOPs	SATA盘，expander，长时间速率数据传输	no_cable_unplug_oops.sh	loog_time_IO_read_write	off	BLOCK	no automated use cases were implemented.
-#N/A	R.SAS.N005.A	ST.FUNC.034	 No cable unplug OOPs	SATA盘，expander，反复读写磁盘	no_cable_unplug_oops.sh	repeat_IO_read_write	off	BLOCK	no automated use cases were implemented.
-PV-1724	R.SAS.N003.A	ST.FUNC.035	SAS 2.0	SATA盘，expander，大IO读写（4M）	support_available_sas_cores.sh	FIO_IO_read_write	off	BLOCK	no automated use cases were implemented.
-PV-1724	R.SAS.N003.A	ST.FUNC.036	SAS 2.0	SATA盘，expander，小IO读写（512B）	support_available_sas_cores.sh	FIO_IO_read_write	off	BLOCK	no automated use cases were implemented.
-#N/A	R.SAS.N005.A	ST.FUNC.037	 No cable unplug OOPs	SATA盘，expander，数据一致性测试	no_cable_unplug_oops.sh	disk_file_data_consistency_test	off	BLOCK	no automated use cases were implemented.
-PV-1612	R.SAS.N007.A	ST.FUNC.038	Stable 2GB file transfer	SATA盘，expander，传输稳定性测试	stable_2GB_file_transfer.sh	iozne_file_transfer_stability_test	off	BLOCK	no automated use cases were implemented.
-PV-1725	R.SAS.N004.A	ST.FUNC.039	SAS 3.0	压力测试  4M~4k随机大小io（读10%）	support_available_sas_cores.sh	FIO_IO_RAIO_randrw	off	BLOCK	no automated use cases were implemented.
-PV-1725	R.SAS.N004.A	ST.FUNC.040	SAS 3.0	压力测试  4M~4k随机大小io（读50%）	support_available_sas_cores.sh	FIO_IO_RAIO_randrw	off	BLOCK	no automated use cases were implemented.
-PV-1725	R.SAS.N004.A	ST.FUNC.041	SAS 3.0	压力测试  4M~4k随机大小io（读90%）	support_available_sas_cores.sh	FIO_IO_RAIO_randrw	off	BLOCK	no automated use cases were implemented.
-PV-1725	R.SAS.N004.A	ST.FUNC.042	SAS 3.0	压力测试 4M~4k随机大小io（只读）	support_available_sas_cores.sh	FIO_IO_RAIO_read_write	off	BLOCK	no automated use cases were implemented.
-PV-1725	R.SAS.N004.A	ST.FUNC.043	SAS 3.0	压力测试 4M~4k随机大小io（只写）	support_available_sas_cores.sh	FIO_IO_RAIO_read_write	off	BLOCK	no automated use cases were implemented.
-PV-1725	R.SAS.N004.A	ST.FUNC.044	SAS 3.0	压力测试随机大小io（4k/30:8k/40:16k/30）	support_available_sas_cores.sh	FIO_IO_RAIO_read_write	off	BLOCK	no automated use cases were implemented.
-PV-1596	R.SAS.F022.A	ST.FUNC.045	Controller reset for ECC error	expander，2bit ECC错误注入	controller_ecc_error_reset.sh	controller_2bit_ecc_reset	off	BLOCK	no automated use cases were implemented.
-PV-1596	R.SAS.F022.A	ST.FUNC.046	Controller reset for ECC error	expander，1bit ECC错误注入	controller_ecc_error_reset.sh	controller_1bit_ecc_reset	off	BLOCK	no automated use cases were implemented.
-PV-1330	R.SAS.F025.A	ST.FUNC.047	RAS support	单bit ECC：SAS_HGC_IOMB_DQE_RAM0	support_ras.sh	1bit_ecc_inject0_en_1	off	BLOCK	no automated use cases were implemented.
-PV-1330	R.SAS.F025.A	ST.FUNC.048	RAS support	单bit ECC：SAS_HGC_IOMB_DQE_RAM1	support_ras.sh	1bit_ecc_inject0_en_2	off	BLOCK	no automated use cases were implemented.
-PV-1330	R.SAS.F025.A	ST.FUNC.049	RAS support	单bit ECC：SAS_HGC_IOMB_DQE_RAM2	support_ras.sh	1bit_ecc_inject0_en_4	off	BLOCK	no automated use cases were implemented.
+PV-1593	R.SAS.N001.A	ST.FUNC.032	The driver should support 700KIOPS per controller	SAS盘，expander，700KIOPS高性能测(4KB)	support_700k_iops.sh	fio_iops_controller	on	FAIL	driver 700k iops verify that 18 is lower than 700.
+#N/A	R.SAS.N005.A	ST.FUNC.033	 No cable unplug OOPs	SATA盘，expander，长时间速率数据传输	no_cable_unplug_oops.sh	loog_time_IO_read_write	on	PASS
+#N/A	R.SAS.N005.A	ST.FUNC.034	 No cable unplug OOPs	SATA盘，expander，反复读写磁盘	no_cable_unplug_oops.sh	repeat_IO_read_write	on	FAIL	FIO tool repeatedly read and write disk failure.
+PV-1724	R.SAS.N003.A	ST.FUNC.035	SAS 2.0	SATA盘，expander，大IO读写（4M）	support_available_sas_cores.sh	FIO_IO_read_write	on	FAIL	FIO tool read and write disk failure.
+PV-1724	R.SAS.N003.A	ST.FUNC.036	SAS 2.0	SATA盘，expander，小IO读写（512B）	support_available_sas_cores.sh	FIO_IO_read_write	on	FAIL	FIO tool read and write disk failure.
