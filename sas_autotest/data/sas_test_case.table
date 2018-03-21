@@ -23,14 +23,14 @@ PV-1724	R.SAS.N003.A	ST.FUNC.025	SAS 2.0	SATA盘，直连，小IO读写（512B）	support_
 #N/A	R.SAS.N005.A	ST.FUNC.027	 No cable unplug OOPs	SAS盘，expander，反复读写磁盘	no_cable_unplug_oops.sh	repeat_IO_read_write	on	
 PV-1725	R.SAS.N004.A	ST.FUNC.028	SAS 3.0	SAS盘，expander，大IO读写（4M）	support_available_sas_cores.sh	FIO_IO_read_write	on	
 PV-1725	R.SAS.N004.A	ST.FUNC.029	SAS 3.0	SAS盘，expander，小IO读写（512B）	support_available_sas_cores.sh	FIO_IO_read_write	on	
-#N/A	R.SAS.N005.A	ST.FUNC.030	 No cable unplug OOPs	SAS盘，expander，数据一致性测试	no_cable_unplug_oops.sh	disk_file_data_consistency_test	on	
+#N/A	R.SAS.N005.A	ST.FUNC.030	 No cable unplug OOPs	SAS盘，expander，数据一致性测试	no_cable_unplug_oops.sh	disk_file_data_consistency_test	off	
 PV-1612	R.SAS.N007.A	ST.FUNC.031	Stable 2GB file transfer	SAS盘，expander，传输稳定性测试	stable_2GB_file_transfer.sh	iozne_file_transfer_stability_test	off	
 PV-1593	R.SAS.N001.A	ST.FUNC.032	The driver should support 700KIOPS per controller	SAS盘，expander，700KIOPS高性能测(4KB)	support_700k_iops.sh	fio_iops_controller	on	
-#N/A	R.SAS.N005.A	ST.FUNC.033	 No cable unplug OOPs	SATA盘，expander，长时间速率数据传输	no_cable_unplug_oops.sh	loog_time_IO_read_write	on	
+#N/A	R.SAS.N005.A	ST.FUNC.033	 No cable unplug OOPs	SATA盘，expander，长时间速率数据传输	no_cable_unplug_oops.sh	loog_time_IO_read_write	off	
 #N/A	R.SAS.N005.A	ST.FUNC.034	 No cable unplug OOPs	SATA盘，expander，反复读写磁盘	no_cable_unplug_oops.sh	repeat_IO_read_write	on	
 PV-1724	R.SAS.N003.A	ST.FUNC.035	SAS 2.0	SATA盘，expander，大IO读写（4M）	support_available_sas_cores.sh	FIO_IO_read_write	on	
 PV-1724	R.SAS.N003.A	ST.FUNC.036	SAS 2.0	SATA盘，expander，小IO读写（512B）	support_available_sas_cores.sh	FIO_IO_read_write	on	
-#N/A	R.SAS.N005.A	ST.FUNC.037	 No cable unplug OOPs	SATA盘，expander，数据一致性测试	no_cable_unplug_oops.sh	disk_file_data_consistency_test	on	
+#N/A	R.SAS.N005.A	ST.FUNC.037	 No cable unplug OOPs	SATA盘，expander，数据一致性测试	no_cable_unplug_oops.sh	disk_file_data_consistency_test	off	
 PV-1612	R.SAS.N007.A	ST.FUNC.038	Stable 2GB file transfer	SATA盘，expander，传输稳定性测试	stable_2GB_file_transfer.sh	iozne_file_transfer_stability_test	off	
 PV-1725	R.SAS.N004.A	ST.FUNC.039	SAS 3.0	压力测试  4M~4k随机大小io（读10%）	support_available_sas_cores.sh	FIO_IO_RAIO_randrw	on	
 PV-1725	R.SAS.N004.A	ST.FUNC.040	SAS 3.0	压力测试  4M~4k随机大小io（读50%）	support_available_sas_cores.sh	FIO_IO_RAIO_randrw	on	

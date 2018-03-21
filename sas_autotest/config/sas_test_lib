@@ -111,6 +111,7 @@ function get_all_disk_part()
             	echo "Select disk: "${name}
 	    else
 		echo "Skip the disk: "${name}
+		lava_report "CI enviroment error: disk ${name} is too small to run fio!" "fail"
 	    fi
         fi
         assert=""
