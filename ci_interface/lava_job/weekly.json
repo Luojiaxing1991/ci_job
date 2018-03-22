@@ -11,7 +11,7 @@
                 "kernel.tree": "plinth",
                 "kernel.version": "release-plinth-4.16.1+_+091a72e6f276815dea552f219940cdaccf2f25bc",
                 "platform.fastboot": "false",
-                "test.plan": "weekly-testing"
+                "test.plan": "luojiaxing-weekly-test"
             },
             "parameters": {
                 "bootloadertype": "ipxe",
@@ -357,7 +357,7 @@
         }
     ],
     "device_type": "hip07-d05",
-    "job_name": "plinth-release-plinth-4.16.1+_+091a72e6f276815dea552f219940cdaccf2f25bc-arm64-defconfig+plinth-config-hip07-d05.dtb-hip07-d05-weekly-testingd05-acpi-weekly-temp",
+    "job_name": "luo_plinth-release-plinth-4.16.1+_+hip07-d05-weekly-testing",
     "logging_level": "DEBUG",
     "priority": "high",
     "timeout": 172800
