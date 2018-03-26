@@ -1,0 +1,66 @@
+[page_0][hi1610_roce_utest_dispatch_cmd : 720]hi1610_utest task 3 start
+[page_0][hi1610_roce_utest_dispatch_cmd_3 : 148]ROCE_TEST CONNECT start!
+[page_0][hi1610_roce_utest_server_connect : 1312]Server test:connect
+[page_0][ctx_init : 300]Alloc recv buff[0].Length(1024),addr(0x22a7f000),pd(0x22a7d270),flags(7)
+[page_0][ctx_init : 300]Alloc recv buff[1].Length(1024),addr(0x22a80000),pd(0x22a7d270),flags(7)
+[page_0][hi1610_roce_utest_post_recv : 1439]Wr info:num_sge(2),wr_id(0xffffd34c0bd0)
+[page_0][hi1610_roce_utest_post_recv : 1442]sge(0) info:lkey(500),addr(0x22a7f000),length(0x400)
+[page_0][hi1610_roce_utest_post_recv : 1442]sge(1) info:lkey(600),addr(0x22a80000),length(0x400)
+[page_0][socket_server_connect : 954]port:60000
+[page_0][socket_server_connect : 963]port(60ea), addr(0)
+[page_0][socket_write_date : 561]Local paremeters:Lid(0x0),out_reads(128),qpn(117),psn(0x0)
+[page_0][socket_write_date : 566]Gid:0:0:0:0:0:0:0:0:0:0:ff:ff:c0:a8:c:78
+
+[page_0][socket_read_data : 532]Remote paremeters:Lid(0x0),out_reads(128),qpn(154),psn(0x0)
+[page_0][socket_read_data : 537]Gid:0:0:0:0:0:0:0:0:0:0:ff:ff:c0:a8:c:77
+
+[page_0][socket_write_date : 561]Local paremeters:Lid(0x0),out_reads(128),qpn(117),psn(0x0)
+[page_0][socket_write_date : 566]Gid:0:0:0:0:0:0:0:0:0:0:ff:ff:c0:a8:c:78
+
+[page_0][socket_read_data : 532]Remote paremeters:Lid(0x0),out_reads(128),qpn(154),psn(0x0)
+[page_0][socket_read_data : 537]Gid:0:0:0:0:0:0:0:0:0:0:ff:ff:c0:a8:c:77
+
+[page_0][hi1610_roce_utest_dispatch_cmd_3 : 233]CONNECT 0 success
+[page_0][hi1610_roce_utest_dispatch_cmd_3 : 237]ROCE_TEST REG_MR start!
+[page_0][hi1610_roce_utest_reg_mr : 1485]Reg mr(0x22a7f730) success.
+[page_0][hi1610_roce_utest_reg_mr : 1487]lkey(700),rkey(700),buff size(400), addr(0x22a84000),access(7)
+[page_0][hi1610_roce_utest_dispatch_cmd_3 : 270]MR0 new sge: addr: 22a84000, len:400, key:700
+[page_0][hi1610_roce_utest_dispatch_cmd_3 : 271]REG_MR 0 success
+[page_0][hi1610_roce_utest_dispatch_cmd_3 : 237]ROCE_TEST REG_MR start!
+[page_0][hi1610_roce_utest_reg_mr : 1485]Reg mr(0x22a7f7c0) success.
+[page_0][hi1610_roce_utest_reg_mr : 1487]lkey(800),rkey(800),buff size(400), addr(0x22a85000),access(4)
+[page_0][hi1610_roce_utest_dispatch_cmd_3 : 270]MR1 new sge: addr: 22a85000, len:400, key:800
+[page_0][hi1610_roce_utest_dispatch_cmd_3 : 271]REG_MR 1 success
+[page_0][hi1610_roce_utest_dispatch_cmd_3 : 334]ROCE_TEST POST RECV start!
+[page_0][hi1610_roce_utest_post_recv : 1439]Wr info:num_sge(1),wr_id(0xffffd34c0de0)
+[page_0][hi1610_roce_utest_post_recv : 1442]sge(0) info:lkey(700),addr(0x22a84000),length(0x400)
+[page_0][hi1610_roce_utest_dispatch_cmd_3 : 364]ROCE_TEST POST RECV 0 finish!
+[page_0][hi1610_roce_utest_dispatch_cmd_3 : 277]ROCE_TEST SEND start!
+[page_0][hi1610_roce_utest_dispatch_cmd_3 : 300]POST SEND local_sge[0]:0,arg->local_sge[1]:-1,arg->remote_sge:-1,wr_flag=-1
+[page_0][hi1610_roce_utest_post_send : 1342]Wr info:lkey(700), length(400), addr(22a84000)
+[page_0][hi1610_roce_utest_post_send : 1351]num_sge(1), send_flags(2), opcode(2), imm_data(4660),wr_id(0x22a7f800),send_wr((nil))
+[page_0][hi1610_roce_utest_dispatch_cmd_3 : 328]POST SEND 0 finish,send_wr_info.send_wr=(nil),remote_key=0x0
+[page_0][hi1610_roce_utest_dispatch_cmd_3 : 369]ROCE_TEST POLL start!
+[page_0][hi1610_roce_utest_dispatch_cmd_3 : 454]opcode(128),qp(117),wr_id(0xffffd34c0bd0),wc_flag(0x0), times(1)
+[page_0][hi1610_roce_utest_dispatch_cmd_3 : 503]POLL CQ 0 SUCCESS
+[page_0][hi1610_roce_utest_dispatch_cmd_3 : 454]opcode(0),qp(117),wr_id(0x22a7f800),wc_flag(0x0), times(1)
+[page_0][hi1610_roce_utest_dispatch_cmd_3 : 503]POLL CQ 1 SUCCESS
+[page_0][hi1610_roce_utest_dispatch_cmd_3 : 597]ROCE_TEST MODIFY_ARG start!
+
+[page_0][hi1610_roce_utest_dispatch_cmd_3 : 618]mr info change. the index is 0 
+[page_0][hi1610_roce_utest_dispatch_cmd_3 : 621]new sge: addr: 22a85000, len:400, key:800
+[page_0][hi1610_roce_utest_dispatch_cmd_3 : 637]ROCE_TEST MODIFY_ARG finish!
+
+[page_0][hi1610_roce_utest_dispatch_cmd_3 : 277]ROCE_TEST SEND start!
+[page_0][hi1610_roce_utest_dispatch_cmd_3 : 300]POST SEND local_sge[0]:0,arg->local_sge[1]:-1,arg->remote_sge:-1,wr_flag=-1
+[page_0][hi1610_roce_utest_post_send : 1342]Wr info:lkey(700), length(400), addr(22a84000)
+[page_0][hi1610_roce_utest_post_send : 1351]num_sge(1), send_flags(2), opcode(2), imm_data(4660),wr_id(0x22a7f870),send_wr((nil))
+[page_0][hi1610_roce_utest_dispatch_cmd_3 : 328]POST SEND 1 finish,send_wr_info.send_wr=(nil),remote_key=0x0
+[page_0][hi1610_roce_utest_dispatch_cmd_3 : 369]ROCE_TEST POLL start!
+[page_0][hi1610_roce_utest_dispatch_cmd_3 : 454]opcode(0),qp(117),wr_id(0x22a7f870),wc_flag(0x0), times(1)
+[page_0][hi1610_roce_utest_dispatch_cmd_3 : 503]POLL CQ 2 SUCCESS
+[page_0][hi1610_roce_utest_dispatch_cmd : 765]hi1610_utest task release start
+[page_0][hi1610_roce_utest_dispatch_cmd : 794]hi1610_utest remote_mr_table release  finish
+[page_0][hi1610_roce_utest_dispatch_cmd : 804]hi1610_utest mr_table release finish
+[page_0][hi1610_roce_utest_rels_conn : 202]here!!!!!!!!!!!!!!!!!!!!
+[page_0][hi1610_roce_utest_dispatch_cmd : 819]hi1610_utest connect release finish

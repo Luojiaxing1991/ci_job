@@ -29,62 +29,6 @@ RR_TYPE="TCP_RR TCP_CRR UDP_RR"
 TCP_MSS="32 64 128 256 512 1024 1500"
 UDP_MSS="32 64 128 256 521 1024 4096 16376 32753 65507"
 
-#Function Descript
-#This function kill all iperf progress in server and customer
-function iperf_killer()
-{
-    cnt1=1
-    cnt2=1
-# First kill the local iperf
-    killall iperf
-    tmpres=`pidof iperf`
-    while [ x"${tmpres}" != x"" ]
-    do
-      ((cnt1++))
-      killall iperf
-      sleep 5
-      tmpres=`pidof iperf`
-      show=`ps -ef | grep iperf`
-      echo ${show}
-  
-      if [ $cnt1 -gt 6 ]
-      then
-        cnt1=0
-	echo "Can not kill the iperf,fail!"
-        break
-      fi
-    done
-
-# Then kill the customer iperf
-    ssh root@$BACK_IP "killall iperf"
-    sleep 10
-    tmpres=`ssh root@$BACK_IP "pidof iperf"`
-    while [ x"${tmpres}" != x"" ]
-    do
-      ((cnt2++))
-      ssh root@$BACK_IP "killall iperf" 
-      sleep 5
-      tmpres=`ssh root@$BACK_IP "pidof iperf"`
-      show=`ssh root@$BACK_IP "ps -ef | grep iperf "`
-      echo ${show}
-
-      if [ $cnt2 -gt 6 ]
-      then
-        cnt2=0
-	echo "Can not kill the iperf,fail!"
-        break
-      fi
-
-    done
-
-    if [ $cnt1 -eq 0 ] || [ $cnt2 -eq 0 ]
-    then 
-	echo "Iperf killer is fail,sorry!"
-    else
-	echo "Iperf killer got his first blood!"
-    fi
-}
-
 function remote_iperf_s()
 {
   ssh root@$BACK_IP "iperf -s -V >/dev/null 2>&1 &"

@@ -50,12 +50,20 @@ function main()
     done
     echo "Finish to Run SAS Test"
 }
+#rebootBoard
 
 #Output log file header
 writeLogHeader
 
 # Get all disk partition information
 get_all_disk_part
+
+#Open smart funtion for all disk
+for tmpdisk in $ALL_DISK_PART_NAME
+do
+        echo "Enable smart function for disk: "${tmpdisk}
+	${SAS_TOP_DIR}/../common_tool/smartctl -s on ${tmpdisk}
+done
 
 main
 

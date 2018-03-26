@@ -74,3 +74,15 @@ COMMON_TOOL_PATH="common_tool"
 
 # Test case tool directory path
 CASEPATH="roce-test"
+
+#********************
+#***add by luojiaxing
+#********************
+#roce user driver repo addr
+ROCE_USERDRV_GITADDR="https//github.com/hisilicon/plinth-roce.git"
+ROCE_USERDRV_BRANCH="plinth-it18"
+#********************
+#***end by luojiaxing
+#********************
+
+

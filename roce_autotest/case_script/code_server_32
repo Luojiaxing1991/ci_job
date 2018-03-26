@@ -12,8 +12,8 @@ port=18515,servername:(null)!
  set mtu ok.
  [PV660_ROCE_4qp_send_se : 17515] create comp channle ok!
  alloc pd ok.
- addr = 0xffffa38bb010,lkey = rkey = 0x500
- addr = 0xffffa39bb010,lkey = rkey = 0x600
+ addr = 0xffff9094d010,lkey = rkey = 0x500
+ addr = 0xffff90a4d010,lkey = rkey = 0x600
  create recv cq ok.
  create send cq ok.
  create qp ok.hr_qp->port_num= 0x1
@@ -28,8 +28,8 @@ port=18515,servername:(null)!
  set mtu ok.
  [PV660_ROCE_4qp_send_se : 17515] create comp channle ok!
  alloc pd ok.
- addr = 0xffffa36ba010,lkey = rkey = 0x700
- addr = 0xffffa37ba010,lkey = rkey = 0x800
+ addr = 0xffff9074c010,lkey = rkey = 0x700
+ addr = 0xffff9084c010,lkey = rkey = 0x800
  create recv cq ok.
  create send cq ok.
  create qp ok.hr_qp->port_num= 0x1
@@ -44,8 +44,8 @@ port=18515,servername:(null)!
  set mtu ok.
  [PV660_ROCE_4qp_send_se : 17515] create comp channle ok!
  alloc pd ok.
- addr = 0xffffa34b9010,lkey = rkey = 0x900
- addr = 0xffffa35b9010,lkey = rkey = 0xa00
+ addr = 0xffff9054b010,lkey = rkey = 0x900
+ addr = 0xffff9064b010,lkey = rkey = 0xa00
  create recv cq ok.
  create send cq ok.
  create qp ok.hr_qp->port_num= 0x1
@@ -62,8 +62,8 @@ Changing to active mtu
  set mtu ok.
  [PV660_ROCE_4qp_send_se : 17515] create comp channle ok!
  alloc pd ok.
- addr = 0xffffa32b8010,lkey = rkey = 0xb00
- addr = 0xffffa33b8010,lkey = rkey = 0xc00
+ addr = 0xffff9034a010,lkey = rkey = 0xb00
+ addr = 0xffff9044a010,lkey = rkey = 0xc00
  create recv cq ok.
  create send cq ok.
  create qp ok.hr_qp->port_num= 0x1
@@ -74,7 +74,7 @@ Changing to active mtu
  modify qp rts ok.
  shake hand ok.
  loop end*********************************
- send_wr = 0x327cf258, recv_wr = 0x327cf228
+ send_wr = 0x1e4132e8, recv_wr = 0x1e4132b8
  qp 0, test 0, data_len= 0x0
  [PV660_ROCE_4qp_send_se : 17686] request notify cq ok!
  qp 1, test 0, data_len= 0x0
