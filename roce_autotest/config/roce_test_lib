@@ -54,6 +54,9 @@ function Set_Test_Ip()
 
 	#get the net's port according the roce's port
 	REMOTE_ETHX=`ssh root@${BACK_IP} "cat /sys/class/infiniband/hns_0/ports/${ROCE_PORT}/gid_attrs/ndevs/0" `
+        
+        echo "The name of local_ethx is "${LOCAL_ETHX}
+        echo "The name of remote_ethx is "${REMOTE_ETHX}
 
 	#set remote ip for testing
 	ssh root@${BACK_IP} "ifconfig ${LOCAL_ETHX} ${remote_port_ip[$ROCE_PORT]}"

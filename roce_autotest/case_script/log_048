@@ -1,0 +1,156 @@
+[page_0][hi1610_roce_utest_dispatch_cmd : 720]hi1610_utest task 15 start
+[page_0][hi1610_roce_utest_dispatch_cmd_3 : 148]ROCE_TEST CONNECT start!
+[page_0][hi1610_roce_utest_server_connect : 1312]Server test:connect
+[page_0][ctx_init : 300]Alloc recv buff[0].Length(128),addr(0x1be2b000),pd(0x1be29270),flags(7)
+[page_0][ctx_init : 300]Alloc recv buff[1].Length(128),addr(0x1be2c000),pd(0x1be29270),flags(7)
+[page_0][hi1610_roce_utest_post_recv : 1439]Wr info:num_sge(2),wr_id(0xfffffaa25bc0)
+[page_0][hi1610_roce_utest_post_recv : 1442]sge(0) info:lkey(500),addr(0x1be2b000),length(0x80)
+[page_0][hi1610_roce_utest_post_recv : 1442]sge(1) info:lkey(600),addr(0x1be2c000),length(0x80)
+[page_0][socket_server_connect : 954]port:60000
+[page_0][socket_server_connect : 963]port(60ea), addr(0)
+[page_0][socket_write_date : 561]Local paremeters:Lid(0x0),out_reads(8),qpn(125),psn(0x0)
+[page_0][socket_write_date : 566]Gid:0:0:0:0:0:0:0:0:0:0:ff:ff:c0:a8:c:78
+
+[page_0][socket_read_data : 532]Remote paremeters:Lid(0x0),out_reads(8),qpn(162),psn(0x0)
+[page_0][socket_read_data : 537]Gid:0:0:0:0:0:0:0:0:0:0:ff:ff:c0:a8:c:77
+
+[page_0][socket_write_date : 561]Local paremeters:Lid(0x0),out_reads(8),qpn(125),psn(0x0)
+[page_0][socket_write_date : 566]Gid:0:0:0:0:0:0:0:0:0:0:ff:ff:c0:a8:c:78
+
+[page_0][socket_read_data : 532]Remote paremeters:Lid(0x0),out_reads(8),qpn(162),psn(0x0)
+[page_0][socket_read_data : 537]Gid:0:0:0:0:0:0:0:0:0:0:ff:ff:c0:a8:c:77
+
+[page_0][hi1610_roce_utest_dispatch_cmd_3 : 233]CONNECT 0 success
+[page_0][hi1610_roce_utest_dispatch_cmd_3 : 148]ROCE_TEST CONNECT start!
+[page_0][hi1610_roce_utest_server_connect : 1312]Server test:connect
+[page_0][socket_write_date : 561]Local paremeters:Lid(0x0),out_reads(8),qpn(126),psn(0x0)
+[page_0][socket_write_date : 566]Gid:0:0:0:0:0:0:0:0:0:0:ff:ff:c0:a8:c:78
+
+[page_0][socket_read_data : 532]Remote paremeters:Lid(0x0),out_reads(8),qpn(163),psn(0x0)
+[page_0][socket_read_data : 537]Gid:0:0:0:0:0:0:0:0:0:0:ff:ff:c0:a8:c:77
+
+[page_0][socket_write_date : 561]Local paremeters:Lid(0x0),out_reads(8),qpn(126),psn(0x0)
+[page_0][socket_write_date : 566]Gid:0:0:0:0:0:0:0:0:0:0:ff:ff:c0:a8:c:78
+
+[page_0][socket_read_data : 532]Remote paremeters:Lid(0x0),out_reads(8),qpn(163),psn(0x0)
+[page_0][socket_read_data : 537]Gid:0:0:0:0:0:0:0:0:0:0:ff:ff:c0:a8:c:77
+
+[page_0][hi1610_roce_utest_dispatch_cmd_3 : 233]CONNECT 1 success
+[page_0][hi1610_roce_utest_dispatch_cmd_3 : 148]ROCE_TEST CONNECT start!
+[page_0][hi1610_roce_utest_server_connect : 1312]Server test:connect
+[page_0][socket_write_date : 561]Local paremeters:Lid(0x0),out_reads(8),qpn(127),psn(0x0)
+[page_0][socket_write_date : 566]Gid:0:0:0:0:0:0:0:0:0:0:ff:ff:c0:a8:c:78
+
+[page_0][socket_read_data : 532]Remote paremeters:Lid(0x0),out_reads(8),qpn(164),psn(0x0)
+[page_0][socket_read_data : 537]Gid:0:0:0:0:0:0:0:0:0:0:ff:ff:c0:a8:c:77
+
+[page_0][socket_write_date : 561]Local paremeters:Lid(0x0),out_reads(8),qpn(127),psn(0x0)
+[page_0][socket_write_date : 566]Gid:0:0:0:0:0:0:0:0:0:0:ff:ff:c0:a8:c:78
+
+[page_0][socket_read_data : 532]Remote paremeters:Lid(0x0),out_reads(8),qpn(164),psn(0x0)
+[page_0][socket_read_data : 537]Gid:0:0:0:0:0:0:0:0:0:0:ff:ff:c0:a8:c:77
+
+[page_0][hi1610_roce_utest_dispatch_cmd_3 : 233]CONNECT 2 success
+[page_0][hi1610_roce_utest_dispatch_cmd_3 : 148]ROCE_TEST CONNECT start!
+[page_0][hi1610_roce_utest_server_connect : 1312]Server test:connect
+[page_0][socket_write_date : 561]Local paremeters:Lid(0x0),out_reads(8),qpn(128),psn(0x0)
+[page_0][socket_write_date : 566]Gid:0:0:0:0:0:0:0:0:0:0:ff:ff:c0:a8:c:78
+
+[page_0][socket_read_data : 532]Remote paremeters:Lid(0x0),out_reads(8),qpn(165),psn(0x0)
+[page_0][socket_read_data : 537]Gid:0:0:0:0:0:0:0:0:0:0:ff:ff:c0:a8:c:77
+
+[page_0][socket_write_date : 561]Local paremeters:Lid(0x0),out_reads(8),qpn(128),psn(0x0)
+[page_0][socket_write_date : 566]Gid:0:0:0:0:0:0:0:0:0:0:ff:ff:c0:a8:c:78
+
+[page_0][socket_read_data : 532]Remote paremeters:Lid(0x0),out_reads(8),qpn(165),psn(0x0)
+[page_0][socket_read_data : 537]Gid:0:0:0:0:0:0:0:0:0:0:ff:ff:c0:a8:c:77
+
+[page_0][hi1610_roce_utest_dispatch_cmd_3 : 233]CONNECT 3 success
+[page_0][hi1610_roce_utest_dispatch_cmd_3 : 148]ROCE_TEST CONNECT start!
+[page_0][hi1610_roce_utest_server_connect : 1312]Server test:connect
+[page_0][socket_write_date : 561]Local paremeters:Lid(0x0),out_reads(8),qpn(129),psn(0x0)
+[page_0][socket_write_date : 566]Gid:0:0:0:0:0:0:0:0:0:0:ff:ff:c0:a8:c:78
+
+[page_0][socket_read_data : 532]Remote paremeters:Lid(0x0),out_reads(8),qpn(166),psn(0x0)
+[page_0][socket_read_data : 537]Gid:0:0:0:0:0:0:0:0:0:0:ff:ff:c0:a8:c:77
+
+[page_0][socket_write_date : 561]Local paremeters:Lid(0x0),out_reads(8),qpn(129),psn(0x0)
+[page_0][socket_write_date : 566]Gid:0:0:0:0:0:0:0:0:0:0:ff:ff:c0:a8:c:78
+
+[page_0][socket_read_data : 532]Remote paremeters:Lid(0x0),out_reads(8),qpn(166),psn(0x0)
+[page_0][socket_read_data : 537]Gid:0:0:0:0:0:0:0:0:0:0:ff:ff:c0:a8:c:77
+
+[page_0][hi1610_roce_utest_dispatch_cmd_3 : 233]CONNECT 4 success
+[page_0][hi1610_roce_utest_dispatch_cmd_3 : 148]ROCE_TEST CONNECT start!
+[page_0][hi1610_roce_utest_server_connect : 1312]Server test:connect
+[page_0][socket_write_date : 561]Local paremeters:Lid(0x0),out_reads(8),qpn(130),psn(0x0)
+[page_0][socket_write_date : 566]Gid:0:0:0:0:0:0:0:0:0:0:ff:ff:c0:a8:c:78
+
+[page_0][socket_read_data : 532]Remote paremeters:Lid(0x0),out_reads(8),qpn(167),psn(0x0)
+[page_0][socket_read_data : 537]Gid:0:0:0:0:0:0:0:0:0:0:ff:ff:c0:a8:c:77
+
+[page_0][socket_write_date : 561]Local paremeters:Lid(0x0),out_reads(8),qpn(130),psn(0x0)
+[page_0][socket_write_date : 566]Gid:0:0:0:0:0:0:0:0:0:0:ff:ff:c0:a8:c:78
+
+[page_0][socket_read_data : 532]Remote paremeters:Lid(0x0),out_reads(8),qpn(167),psn(0x0)
+[page_0][socket_read_data : 537]Gid:0:0:0:0:0:0:0:0:0:0:ff:ff:c0:a8:c:77
+
+[page_0][hi1610_roce_utest_dispatch_cmd_3 : 233]CONNECT 5 success
+[page_0][hi1610_roce_utest_dispatch_cmd_3 : 148]ROCE_TEST CONNECT start!
+[page_0][hi1610_roce_utest_server_connect : 1312]Server test:connect
+[page_0][socket_write_date : 561]Local paremeters:Lid(0x0),out_reads(8),qpn(131),psn(0x0)
+[page_0][socket_write_date : 566]Gid:0:0:0:0:0:0:0:0:0:0:ff:ff:c0:a8:c:78
+
+[page_0][socket_read_data : 532]Remote paremeters:Lid(0x0),out_reads(8),qpn(168),psn(0x0)
+[page_0][socket_read_data : 537]Gid:0:0:0:0:0:0:0:0:0:0:ff:ff:c0:a8:c:77
+
+[page_0][socket_write_date : 561]Local paremeters:Lid(0x0),out_reads(8),qpn(131),psn(0x0)
+[page_0][socket_write_date : 566]Gid:0:0:0:0:0:0:0:0:0:0:ff:ff:c0:a8:c:78
+
+[page_0][socket_read_data : 532]Remote paremeters:Lid(0x0),out_reads(8),qpn(168),psn(0x0)
+[page_0][socket_read_data : 537]Gid:0:0:0:0:0:0:0:0:0:0:ff:ff:c0:a8:c:77
+
+[page_0][hi1610_roce_utest_dispatch_cmd_3 : 233]CONNECT 6 success
+[page_0][hi1610_roce_utest_dispatch_cmd_3 : 148]ROCE_TEST CONNECT start!
+[page_0][hi1610_roce_utest_server_connect : 1312]Server test:connect
+[page_0][socket_write_date : 561]Local paremeters:Lid(0x0),out_reads(8),qpn(132),psn(0x0)
+[page_0][socket_write_date : 566]Gid:0:0:0:0:0:0:0:0:0:0:ff:ff:c0:a8:c:78
+
+[page_0][socket_read_data : 532]Remote paremeters:Lid(0x0),out_reads(8),qpn(169),psn(0x0)
+[page_0][socket_read_data : 537]Gid:0:0:0:0:0:0:0:0:0:0:ff:ff:c0:a8:c:77
+
+[page_0][socket_write_date : 561]Local paremeters:Lid(0x0),out_reads(8),qpn(132),psn(0x0)
+[page_0][socket_write_date : 566]Gid:0:0:0:0:0:0:0:0:0:0:ff:ff:c0:a8:c:78
+
+[page_0][socket_read_data : 532]Remote paremeters:Lid(0x0),out_reads(8),qpn(169),psn(0x0)
+[page_0][socket_read_data : 537]Gid:0:0:0:0:0:0:0:0:0:0:ff:ff:c0:a8:c:77
+
+[page_0][hi1610_roce_utest_dispatch_cmd_3 : 233]CONNECT 7 success
+[page_0][hi1610_roce_utest_dispatch_cmd_3 : 148]ROCE_TEST CONNECT start!
+[page_0][hi1610_roce_utest_server_connect : 1312]Server test:connect
+[page_0][socket_write_date : 561]Local paremeters:Lid(0x0),out_reads(8),qpn(133),psn(0x0)
+[page_0][socket_write_date : 566]Gid:0:0:0:0:0:0:0:0:0:0:ff:ff:c0:a8:c:78
+
+[page_0][socket_read_data : 532]Remote paremeters:Lid(0x0),out_reads(8),qpn(170),psn(0x0)
+[page_0][socket_read_data : 537]Gid:0:0:0:0:0:0:0:0:0:0:ff:ff:c0:a8:c:77
+
+[page_0][socket_write_date : 561]Local paremeters:Lid(0x0),out_reads(8),qpn(133),psn(0x0)
+[page_0][socket_write_date : 566]Gid:0:0:0:0:0:0:0:0:0:0:ff:ff:c0:a8:c:78
+
+[page_0][socket_read_data : 532]Remote paremeters:Lid(0x0),out_reads(8),qpn(170),psn(0x0)
+[page_0][socket_read_data : 537]Gid:0:0:0:0:0:0:0:0:0:0:ff:ff:c0:a8:c:77
+
+[page_0][hi1610_roce_utest_dispatch_cmd_3 : 233]CONNECT 8 success
+[page_0][hi1610_roce_utest_dispatch_cmd : 765]hi1610_utest task release start
+[page_0][hi1610_roce_utest_dispatch_cmd : 794]hi1610_utest remote_mr_table release  finish
+[page_0][hi1610_roce_utest_dispatch_cmd : 804]hi1610_utest mr_table release finish
+[page_0][hi1610_roce_utest_rels_conn : 202]here!!!!!!!!!!!!!!!!!!!!
+[page_0][hi1610_roce_utest_rels_conn : 202]here!!!!!!!!!!!!!!!!!!!!
+[page_0][hi1610_roce_utest_rels_conn : 202]here!!!!!!!!!!!!!!!!!!!!
+[page_0][hi1610_roce_utest_rels_conn : 202]here!!!!!!!!!!!!!!!!!!!!
+[page_0][hi1610_roce_utest_rels_conn : 202]here!!!!!!!!!!!!!!!!!!!!
+[page_0][hi1610_roce_utest_rels_conn : 202]here!!!!!!!!!!!!!!!!!!!!
+[page_0][hi1610_roce_utest_rels_conn : 202]here!!!!!!!!!!!!!!!!!!!!
+[page_0][hi1610_roce_utest_rels_conn : 202]here!!!!!!!!!!!!!!!!!!!!
+[page_0][hi1610_roce_utest_rels_conn : 202]here!!!!!!!!!!!!!!!!!!!!
+[page_0][hi1610_roce_utest_dispatch_cmd : 819]hi1610_utest connect release finish

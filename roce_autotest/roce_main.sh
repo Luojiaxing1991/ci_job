@@ -59,6 +59,13 @@ function main()
 	done
 }
 
+#
+insmod /home/kernel/output/hns-roce.ko
+insmod /home/kernel/output/hns-roce-hw-v1.ko
+
+LOCAL_ETHX=`cat /sys/class/infiniband/hns_0/ports/${ROCE_PORT}/gid_attrs/ndevs/0`
+
+
 #roce test is only excute in 159 dash board
 #Find the local MAC
 tmpMAC=`ifconfig eth0 | grep "HWaddr" | awk '{print $NF}'`
@@ -103,10 +110,89 @@ Set_Test_Ip
 
 copy_tool_so
 
+#********
+#****Start : Clone roce user driver repo and build it
+#********
+
+#save the current path
+save_path=`pwd`
+
+#cd into the repo
+tmp=`echo ${ROCE_USERDRV_GITADDR} | awk -F'.' '{print $2}' | awk -F'/' '{print $NF}'`
+echo "The name of kernel repo is "$tmp
+
+#checkout if roce user driver repo is exit or not!
+mkdir /home/luojiaxing/
+
+if [ ! -d "/home/luojiaxing/${tmp}" ];then
+	echo "The roce user driver repo is not exit! Begin to clone repo!"
+        cd /home/luojiaxing
+        git clone ${KERNEL_GITADDR}
+else
+	echo "The kernel repo have been found!"
+fi
+
+cd /home/luojiaxing/${tmp}
+
+#checkout specified branch and build keinel
+git branch | grep ${ROCE_USERDRV_BRANCH}
+
+if [ $? -eq 0 ];then
+	#The same name of branch is exit
+	git checkout -b tmp_luo origin/${ROCE_USERDRV_BRANCH}
+	git branch -D ${ROCE_USERDRV_BRANCH}
+fi
+
+git checkout -b ${ROCE_USERDRV_BRANCH} origin/${ROCE_USERDRV_BRANCH}
+git branch -D tmp_luo
+
+echo "Begin to build the roce user driver!"
+bash build.sh 
+
+echo "Finish the roce user driver build!"
+
+#copy the so to /lib document
+cd build/lib/
+mkdir luo
+cp -a libhns-rdmav* luo/
+cp -a libibverbs.so* luo/
+cp -a libibumad.so* luo/
+cp -a librdmacm.so* luo/
+
+cp -a luo/* /lib/
+
+#copy the user driver to client's /lib/
+tar zcvf roce_user_drv.tar.gz luo
+scp roce_user_drv.tar.gz root@${BACK_IP}:/home/kernel/lib/
+
+ssh root@${BACK_IP} "cd /home/kernel/lib/;tar zxvf roce_user_drv.tar.gz;cp -a luo/* /lib/"
+ssh root@${BACK_IP} "rm -r /home/kernel/lib/luo/"
+ssh root@${BACK_IP} "rm /home/kernel/lib/roce_user_drv.tar.gz"
+
+rm -r luo/
+rm roce_user_drv.tar.gz 
+
+echo "Finish copy the roce user driver to /lib/"
+
+cd ${save_path}
+
+#********
+#****END : Clone roce user driver repo and build it
 # Output log file header
+
+#kill roce process running before
+/${ROCE_TOP_DIR}/case_script/roce-test -m 2 -c 0xff -r
+ssh root@${BACK_IP} "/root/roce-test/roce-test -m 2 -c 0xff -r"
+sleep 10
+
 writeLogHeader
 
 main
+
+#kill roce process running before
+/${ROCE_TOP_DIR}/case_script/roce-test -m 2 -c 0xff -r
+ssh root@${BACK_IP} "/root/roce-test/roce-test -m 2 -c 0xff -r"
+sleep 10
 
 # clean exit so lava-test can trust the results
 exit 0

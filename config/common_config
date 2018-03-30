@@ -125,5 +125,15 @@ COMMON_CLIENT_IP="0.0.0.0"
 #Default DHCP server ip. 
 #prepare for DHCP ip no found
 COMMON_DEFAULT_DHCP_IP="192.168.3.100"
+
+#The repo address of kernel
+KERNEL_GITADDR="https://github.com/hisilicon/kernel-dev.git"
+BRANCH_NAME="release-plinth-4.16.1"
+
+#boot disk
+BOOT_DISK="/dev/ada1"
+
+#The MACaddr list of Board which support this test suite
+TESTBOARD_MAC_LIST="$BOARD_159_MAC_ADDR"
 ####################################################################################
 

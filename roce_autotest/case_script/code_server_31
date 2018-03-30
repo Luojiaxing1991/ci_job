@@ -11,8 +11,8 @@ port=18515,servername:(null)!
 
  set mtu ok.
  alloc pd ok.
- addr = 0xffffa5ba3010,lkey = rkey = 0x500
- addr = 0xffffa5ca3010,lkey = rkey = 0x600
+ addr = 0xffffa6fe4010,lkey = rkey = 0x500
+ addr = 0xffffa70e4010,lkey = rkey = 0x600
  create recv cq ok.
  create send cq ok.
  create qp ok.hr_qp->port_num= 0x1
@@ -26,8 +26,8 @@ port=18515,servername:(null)!
 
  set mtu ok.
  alloc pd ok.
- addr = 0xffffa59a2010,lkey = rkey = 0x700
- addr = 0xffffa5aa2010,lkey = rkey = 0x800
+ addr = 0xffffa6de3010,lkey = rkey = 0x700
+ addr = 0xffffa6ee3010,lkey = rkey = 0x800
  create recv cq ok.
  create send cq ok.
  create qp ok.hr_qp->port_num= 0x1
@@ -41,8 +41,8 @@ port=18515,servername:(null)!
 
  set mtu ok.
  alloc pd ok.
- addr = 0xffffa57a1010,lkey = rkey = 0x900
- addr = 0xffffa58a1010,lkey = rkey = 0xa00
+ addr = 0xffffa6be2010,lkey = rkey = 0x900
+ addr = 0xffffa6ce2010,lkey = rkey = 0xa00
  create recv cq ok.
  create send cq ok.
  create qp ok.hr_qp->port_num= 0x1
@@ -58,8 +58,8 @@ Changing to active mtu
 
  set mtu ok.
  alloc pd ok.
- addr = 0xffffa55a0010,lkey = rkey = 0xb00
- addr = 0xffffa56a0010,lkey = rkey = 0xc00
+ addr = 0xffffa69e1010,lkey = rkey = 0xb00
+ addr = 0xffffa6ae1010,lkey = rkey = 0xc00
  create recv cq ok.
  create send cq ok.
  create qp ok.hr_qp->port_num= 0x1
@@ -73,8 +73,8 @@ Changing to active mtu
 
  set mtu ok.
  alloc pd ok.
- addr = 0xffffa539f010,lkey = rkey = 0xd00
- addr = 0xffffa549f010,lkey = rkey = 0xe00
+ addr = 0xffffa67e0010,lkey = rkey = 0xd00
+ addr = 0xffffa68e0010,lkey = rkey = 0xe00
  create recv cq ok.
  create send cq ok.
  create qp ok.hr_qp->port_num= 0x1
@@ -88,8 +88,8 @@ Changing to active mtu
 
  set mtu ok.
  alloc pd ok.
- addr = 0xffffa519e010,lkey = rkey = 0xf00
- addr = 0xffffa529e010,lkey = rkey = 0x1000
+ addr = 0xffffa65df010,lkey = rkey = 0xf00
+ addr = 0xffffa66df010,lkey = rkey = 0x1000
  create recv cq ok.
  create send cq ok.
  create qp ok.hr_qp->port_num= 0x1
@@ -103,8 +103,8 @@ Changing to active mtu
 
  set mtu ok.
  alloc pd ok.
- addr = 0xffffa4f9d010,lkey = rkey = 0x1100
- addr = 0xffffa509d010,lkey = rkey = 0x1200
+ addr = 0xffffa63de010,lkey = rkey = 0x1100
+ addr = 0xffffa64de010,lkey = rkey = 0x1200
  create recv cq ok.
  create send cq ok.
  create qp ok.hr_qp->port_num= 0x1
@@ -120,8 +120,8 @@ Changing to active mtu
 
  set mtu ok.
  alloc pd ok.
- addr = 0xffffa4d9c010,lkey = rkey = 0x1300
- addr = 0xffffa4e9c010,lkey = rkey = 0x1400
+ addr = 0xffffa61dd010,lkey = rkey = 0x1300
+ addr = 0xffffa62dd010,lkey = rkey = 0x1400
  create recv cq ok.
  create send cq ok.
  create qp ok.hr_qp->port_num= 0x1
@@ -132,7 +132,7 @@ Changing to active mtu
  modify qp rts ok.
  shake hand ok.
  loop end*********************************
- send_wr = 0x303d9258, recv_wr = 0x303d9228
+ send_wr = 0x38d402e8, recv_wr = 0x38d402b8
  qp 0, test 0, data_len= 0x0
  qp 1, test 0, data_len= 0x0
  qp 2, test 0, data_len= 0x0

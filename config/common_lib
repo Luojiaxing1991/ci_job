@@ -1,8 +1,27 @@
+
+
+
 #############################################################################################################
 # function list
 # new function write at end
 # 1 writeLog
 #############################################################################################################
+
+#  Output success test case log information
+#  IN : 
+#       $1:    The title of testcase
+#       $2:    The result of current testcase
+#           pass:  the test is ok
+#           fail:  the test is fail
+#  OUT: N/A
+function lava_report()
+{
+    #echo "The result of test "$1" is "$2
+    #This cmd used to report pass result to lava server0
+    lava-test-case "$1" --result $2
+    return 0
+}
+
 
 
 #  Output success test case log information
@@ -73,23 +92,6 @@ function setTrustRelation
 ####
 #add by luojiaxing
 ####
-
-#  Output success test case log information
-#  IN : 
-#       $1:    The title of testcase
-#       $2:    The result of current testcase
-#           pass:  the test is ok
-#           fail:  the test is fail
-#  OUT: N/A
-function lava_report()
-{
-    echo "The result of test "$1" is "$2
-    #This cmd used to report pass result to lava server0
-    lava-test-case "$1" --result $2
-    return 0
-}
-
-
 # Set trust relationship for two boards
 # IN : 
 #     $1 : Ip of target server
@@ -156,6 +158,8 @@ function getIPofClientServer
     tmpClientMacAddr=${2}
     tmpUserName=${3}
 	tmpPassWord=${4}
+    
+    ping $COMMON_DEFAULT_DHCP_IP -c 5   
  
     echo ${tmpDHCPMacAddr} ${tmpClientMacAddr} ${tmpUserName} ${tmpPassWord}
 	
@@ -173,10 +177,11 @@ function getIPofClientServer
         #show client ip info in arp list in DHCP server using ssh service 
         spawn ssh $user_name@$back_ip  "arp | grep '${tmpClientMacAddr}'"
 		
-        sleep 10
-        set timeout 120
-        expect "Are you sure you want to continue connecting (yes/no)?"
+        sleep 20
+        #set timeout 120
+        #expect "Are you sure you want to continue connecting (yes/no)?"
         send "yes\r"
+        sleep 10
         expect -re ".*password:"
         #set timeout 120
         send "$pass_word\r"
@@ -197,10 +202,11 @@ function getIPofClientServer
         	#show client ip info in arp list in DHCP server using ssh service 
         	spawn ssh $user_name@$back_ip  "arp | grep '${tmpClientMacAddr}'"
 		
-        	sleep 10
-        	expect "Are you sure you want to continue connecting (yes/no)?"
-        	set timeout 60
+        	sleep 20
+        	#expect "Are you sure you want to continue connecting (yes/no)?"
+        	#set timeout 60
         	send "yes\r"
+                sleep 10
         	expect -re ".*password:"
         	set timeout 60
         	send "$pass_word\r"
@@ -229,6 +235,129 @@ function getIPofClientServer
         rm res.log
 }
 
+## Modify Boot Order to self disk reboot
+# IN : N/A
+# OUT: N/A
+function modifyBootOrder()
+{
+
+  #***First, we should change the boot order to make TEST_REBOOT lie on first order***
+
+  #get the first order id of boot order list
+  First_ID=`efibootmgr -v | grep "BootOrder" | awk '{print $2}' | awk -F',' '{print $1}'`
+
+  #get the id of TEST_REBOOT
+  tmp=`efibootmgr -v | grep "Self_Disk_Reboot" | awk '{print $1}'`
+  tmp=${tmp:4:4}
+  echo $tmp
+
+  #insert the order of TEST_REBOOT into first order
+  efibootmgr -o $tmp,$First_ID
+
+ # efibootmgr
+  
+}
+
+function recoverBootOrder()
+{
+ #***First, we should change the boot order to make TEST_REBOOT lie on first order***
+
+  #get the first order id of boot order list
+  First_ID=`efibootmgr -v | grep "BootOrder" | awk '{print $2}' | awk -F',' '{print $1}'`
+
+  #get the id of TEST_REBOOT
+  tmp=`efibootmgr -v | grep "EFI Network 2" | awk '{print $1}'`
+  tmp=${tmp:4:4}
+  echo $tmp
+
+  #insert the order of TEST_REBOOT into first order
+  efibootmgr -o $tmp,$First_ID
+
+  #efibootmgr
+
+}
+
+function remoteLogin()
+{
+   #First,reboot
+   #ssh root@192.168.3.197 "reboot"
+   expect -c '
+        	set timeout -1
+        	spawn ssh root@192.168.3.197  "reboot"
+		
+        	sleep 120
+        	expect "login:"
+        	set timeout 120
+        	send "root\r"
+        	expect -re "Password"
+        	set timeout 60
+        	send "root\r"
+        	expect eof
+        	exit 0
+    		' 
+   ssh root@192.168.3.197 "pwd"
+   echo "Success login in the system"
+}
+
+
+#Function Descript
+#This function kill all iperf progress in server and customer
+function iperf_killer()
+{
+    cnt1=1
+    cnt2=1
+# First kill the local iperf
+    killall iperf
+    tmpres=`pidof iperf`
+    while [ x"${tmpres}" != x"" ]
+    do
+      ((cnt1++))
+      killall iperf
+      sleep 5
+      tmpres=`pidof iperf`
+      show=`ps -ef | grep iperf`
+      echo ${show}
+  
+      if [ $cnt1 -gt 6 ]
+      then
+        cnt1=0
+	echo "Can not kill the iperf,fail!"
+        break
+      fi
+    done
+
+# Then kill the customer iperf
+    ssh root@$BACK_IP "killall iperf"
+    sleep 10
+    tmpres=`ssh root@$BACK_IP "pidof iperf"`
+    while [ x"${tmpres}" != x"" ]
+    do
+      ((cnt2++))
+      ssh root@$BACK_IP "killall iperf" 
+      sleep 5
+      tmpres=`ssh root@$BACK_IP "pidof iperf"`
+      show=`ssh root@$BACK_IP "ps -ef | grep iperf "`
+      echo ${show}
+
+      if [ $cnt2 -gt 6 ]
+      then
+        cnt2=0
+	echo "Can not kill the iperf,fail!"
+        break
+      fi
+
+    done
+
+    if [ $cnt1 -eq 0 ] || [ $cnt2 -eq 0 ]
+    then
+	echo "iperf kill fail!"
+    else
+	echo "Iperf killer got his first blood!"
+    fi
+} 
+####
+#End of luojiaxing edit
+####
 
 
 
