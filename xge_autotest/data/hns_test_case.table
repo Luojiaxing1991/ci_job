@@ -90,16 +90,16 @@ PV-1516	R.HNS.P001.B	ST_XGE_IPV4_PERF_03		XGE单网口 IPv4 iperf 测试-单板同时作为
 PV-1516	R.HNS.P001.B	ST_XGE_IPV4_PERF_04		XGE双网口 IPv4 iperf 测试-单板作为客户端	performance.sh	iperf_single	on	
 PV-1516	R.HNS.P001.B	ST_XGE_IPV4_PERF_05		XGE双网口 IPv4 iperf 测试-单板作为服务器端	performance.sh	iperf_single	on	
 PV-1516	R.HNS.P001.B	ST_XGE_IPV4_PERF_06		XGE双网口 IPv4 iperf 测试-单板同时作为服务器端和客户端	performance.sh	iperf_dual	on	
-PV-1517	R.HNS.P003.B	ST_GE_NETPERF_000	网口netperf测试	GE网口netperf TCP_STREAM测试	performance.sh	netperf_single	on	
-PV-1517	R.HNS.P003.B	ST_GE_NETPERF_005		GE网口netperf TCP_RR测试	performance.sh	netperf_single	on	
-PV-1517	R.HNS.P003.B	ST_GE_NETPERF_010		GE网口netperf TCP_CRR测试	performance.sh	netperf_single	on	
-PV-1517	R.HNS.P003.B	ST_GE_NETPERF_015		GE网口netperf UDP_STREAM测试	performance.sh	netperf_single	on	
-PV-1517	R.HNS.P003.B	ST_GE_NETPERF_020		GE网口netperf UDP_RR测试	performance.sh	netperf_single	on	
-PV-1517	R.HNS.P003.B	ST_XGE_NETPERF_01		XGE网口netperf TCP_STREAM测试	performance.sh	netperf_single	on	
-PV-1517	R.HNS.P003.B	ST_XGE_NETPERF_02		XGE网口netperf TCP_RR测试	performance.sh	netperf_single	on	
-PV-1517	R.HNS.P003.B	ST_XGE_NETPERF_03		XGE网口netperf TCP_CRR测试	performance.sh	netperf_single	on	
-PV-1517	R.HNS.P003.B	ST_XGE_NETPERF_04		XGE网口netperf UDP_STREAM测试	performance.sh	netperf_single	on	
-PV-1517	R.HNS.P003.B	ST_XGE_NETPERF_05		XGE网口netperf UDP_RR测试	performance.sh	netperf_single	on	
+PV-1517	R.HNS.P003.B	ST_GE_NETPERF_000	网口netperf测试	GE网口netperf TCP_STREAM测试	performance.sh	netperf_single	off	
+PV-1517	R.HNS.P003.B	ST_GE_NETPERF_005		GE网口netperf TCP_RR测试	performance.sh	netperf_single	off	
+PV-1517	R.HNS.P003.B	ST_GE_NETPERF_010		GE网口netperf TCP_CRR测试	performance.sh	netperf_single	off	
+PV-1517	R.HNS.P003.B	ST_GE_NETPERF_015		GE网口netperf UDP_STREAM测试	performance.sh	netperf_single	off	
+PV-1517	R.HNS.P003.B	ST_GE_NETPERF_020		GE网口netperf UDP_RR测试	performance.sh	netperf_single	off	
+PV-1517	R.HNS.P003.B	ST_XGE_NETPERF_01		XGE网口netperf TCP_STREAM测试	performance.sh	netperf_single	off	
+PV-1517	R.HNS.P003.B	ST_XGE_NETPERF_02		XGE网口netperf TCP_RR测试	performance.sh	netperf_single	off	
+PV-1517	R.HNS.P003.B	ST_XGE_NETPERF_03		XGE网口netperf TCP_CRR测试	performance.sh	netperf_single	off	
+PV-1517	R.HNS.P003.B	ST_XGE_NETPERF_04		XGE网口netperf UDP_STREAM测试	performance.sh	netperf_single	off	
+PV-1517	R.HNS.P003.B	ST_XGE_NETPERF_05		XGE网口netperf UDP_RR测试	performance.sh	netperf_single	off	
 PV-1517	R.HNS.P003.B	ST_GE_QPERF_01	网口时延测试	GE网口tcp时延测试	performance.sh	qperf_test	off	
 PV-1517	R.HNS.P003.B	ST_GE_QPERF_02		GE网口udp时延测试	performance.sh	qperf_test	off	
 PV-1517	R.HNS.P003.B	ST_XGE_QPERF_01		XGE网口tcp时延测试	performance.sh	qperf_test	off	
