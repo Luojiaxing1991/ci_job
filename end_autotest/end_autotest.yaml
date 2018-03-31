@@ -7,7 +7,7 @@ metadata:
   format: Lava-Test-Shell Test Definition 1.0
   maintainer:
   - luojiaxing@huawei.com
-  name: xge_autotest
+  name: end_autotest
   os:
   - ubuntu
   scope:

@@ -1,0 +1,89 @@
+From e3030c4c34c09c8d31472acfab0ad906e0361b5b Mon Sep 17 00:00:00 2001
+From: Luojiaxing1991 <luojiaxing@huawei.com>
+Date: Thu, 29 Mar 2018 07:50:28 +0000
+Subject: [PATCH] :sparkles: add perf test support code for l3c and mn
+
+---
+ drivers/perf/hisilicon/hisi_uncore_l3c_v2.c | 6 +++---
+ drivers/perf/hisilicon/hisi_uncore_mn_v2.c  | 6 +++---
+ drivers/perf/hisilicon/hisi_uncore_pmu_v2.c | 2 +-
+ 3 files changed, 7 insertions(+), 7 deletions(-)
+
+diff --git a/drivers/perf/hisilicon/hisi_uncore_l3c_v2.c b/drivers/perf/hisilicon/hisi_uncore_l3c_v2.c
+index 89e0fb8..d4387df 100644
+--- a/drivers/perf/hisilicon/hisi_uncore_l3c_v2.c
++++ b/drivers/perf/hisilicon/hisi_uncore_l3c_v2.c
+@@ -150,7 +150,7 @@ static u64 hisi_l3c_read_counter(struct hisi_pmu_v2 *l3c_pmu, int cntr_idx)
+ 
+ 	reg_off = get_counter_reg_off(cntr_idx);
+ 	hisi_djtag_readreg(module_id, bank_sel, reg_off, client, &value);
+-
++	pr_info("%s value 0x%llx;status %x\n",__FUNCTION__,value,status);
+ 	return value;
+ }
+ 
+@@ -250,7 +250,7 @@ static void hisi_l3c_start_counters(struct hisi_pmu_v2 *l3c_pmu)
+ 
+ 	if (!enabled)
+ 		return;
+-
++        dump_stack();
+ 	/*
+ 	 * Set the event_bus_en bit in L3C AUCNTRL to start counting
+ 	 * for the L3C bank
+@@ -269,7 +269,7 @@ static void hisi_l3c_stop_counters(struct hisi_pmu_v2 *l3c_pmu)
+ 	u32 module_id = GET_MODULE_ID(l3c_data);
+ 	u32 bank_sel = GET_BANK_SEL(l3c_data);
+ 	u32 value;
+-
++        dump_stack();
+ 	/*
+ 	 * Clear the event_bus_en bit in L3C AUCNTRL
+ 	 */
+diff --git a/drivers/perf/hisilicon/hisi_uncore_mn_v2.c b/drivers/perf/hisilicon/hisi_uncore_mn_v2.c
+index 0b4bb55..f5e6f66 100644
+--- a/drivers/perf/hisilicon/hisi_uncore_mn_v2.c
++++ b/drivers/perf/hisilicon/hisi_uncore_mn_v2.c
+@@ -91,7 +91,7 @@ static u64 hisi_mn_read_counter(struct hisi_pmu_v2 *mn_pmu, int cntr_idx)
+ 	reg_off = get_counter_reg_off(cntr_idx);
+ 	hisi_djtag_readreg(module_id, MN1_BANK_SELECT, reg_off,
+ 			   client, &value);
+-
++        pr_info("%s value 0x%llx;status %x\n",__FUNCTION__,value,status);_
+ 	return value;
+ }
+ 
+@@ -170,7 +170,7 @@ static void hisi_mn_start_counters(struct hisi_pmu_v2 *mn_pmu)
+ 
+ 	if (!enabled)
+ 		return;
+-
++        dump_stack();
+ 	/* Set the event_bus_en bit in MN_EVENT_CTRL to start counting */
+ 	hisi_djtag_readreg(module_id, MN1_BANK_SELECT, MN1_EVCTRL_REG_OFF,
+ 			   client, &value);
+@@ -185,7 +185,7 @@ static void hisi_mn_stop_counters(struct hisi_pmu_v2 *mn_pmu)
+ 	struct hisi_djtag_client *client = mn_data->client;
+ 	u32 module_id = GET_MODULE_ID(mn_data);
+ 	u32 value;
+-
++        dump_stack();
+ 	/*
+ 	 * Clear the event_bus_en bit in MN_EVENT_CTRL
+ 	 */
+diff --git a/drivers/perf/hisilicon/hisi_uncore_pmu_v2.c b/drivers/perf/hisilicon/hisi_uncore_pmu_v2.c
+index 01e0a35..098e93c 100644
+--- a/drivers/perf/hisilicon/hisi_uncore_pmu_v2.c
++++ b/drivers/perf/hisilicon/hisi_uncore_pmu_v2.c
+@@ -279,7 +279,7 @@ void hisi_uncore_pmu_set_event_period_v2(struct perf_event *event)
+ 	local64_set(&hwc->prev_count, val);
+ 
+ 	/* Write start value to the hardware event counter */
+-	hisi_pmu->ops->write_counter(hisi_pmu, hwc, (u32) val);
++	hisi_pmu->ops->write_counter(hisi_pmu, hwc, 0xFFFFFFFFFF00);
+ }
+ 
+ u64 hisi_uncore_pmu_event_update_v2(struct perf_event *event)
+-- 
+2.7.4
+

@@ -42,8 +42,9 @@ function ge_vlan_multi_port()
 function vlan_fault_tolerant()
 {
     Test_Case_Title="vlan_fault_tolerant"
-    ip link add link eth10 name eth10.401 type vlan id 401 | tee -a ${HNS_TOP_DIR}/data/log/vlan_fault_tolerant.log
-    sleep 5
+    #ip link add link eth10 name eth10.401 type vlan id 401 | tee -a ${HNS_TOP_DIR}/data/log/vlan_fault_tolerant.log
+    #sleep 5
+    ip link add link eth10 name eth10.401 type vlan id 401 2>/dev/null 
     if [ $? -eq 1 ];then
         MESSAGE="PASS"
     else
@@ -185,11 +186,11 @@ function xge_vlan_up_down
 function main()
 {
     ConfigVlan=`zcat /proc/config.gz | grep -w "CONFIG_VLAN_8021Q" | awk -F"=" '{print $2}'`
-    if [ $ConfigVlan -eq "m" ];then
+    if [ x"$ConfigVlan" != x"m" ];then
         MESSAGE="FAIL\t Please build VLAN into kernel"
+    else
+    	test_case_switch
     fi
-    test_case_switch
-
     
 }
 

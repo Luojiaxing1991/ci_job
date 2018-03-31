@@ -32,9 +32,10 @@ function ge_query_driven_version_information()
 function ge_query_driven_version_fault_tolerant()
 {
     Test_Case_Title="ge_query_driven_version_fault_tolerant"
-    ethtool -i eth10 > ${HNS_TOP_DIR}/data/log/ge_query_driven_version_fault_tolerant.txt 2>&1
-    cat ${HNS_TOP_DIR}/data/log/ge_query_driven_version_fault_tolerant.txt | grep "Cannot get driver information: No such device"
-    if [ $? = 0 ];then
+    #ethtool -i eth10 > ${HNS_TOP_DIR}/data/log/ge_query_driven_version_fault_tolerant.txt 2>&1
+    #cat ${HNS_TOP_DIR}/data/log/ge_query_driven_version_fault_tolerant.txt | grep "Cannot get driver information: No such device"
+    ethtool -i eth10 2>/dev/null
+    if [ $? -ne 0 ];then
         MESSAGE="PASS"
     else
         MESSAGE="FAIL\t No print error information"

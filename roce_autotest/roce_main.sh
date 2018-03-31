@@ -63,6 +63,8 @@ function main()
 insmod /home/kernel/output/hns-roce.ko
 insmod /home/kernel/output/hns-roce-hw-v1.ko
 
+
+
 LOCAL_ETHX=`cat /sys/class/infiniband/hns_0/ports/${ROCE_PORT}/gid_attrs/ndevs/0`
 
 
@@ -109,6 +111,13 @@ TrustRelation ${BACK_IP}
 Set_Test_Ip
 
 copy_tool_so
+
+#
+#scp /home/kernel/output/hns-roce.ko root@${BACK_IP}:/home/tmp/
+#scp /home/kernel/output/hns-roce-hw-v1.ko root@${BACK_IP}:/home/tmp/
+#ssh root@${BACK_IP} "insmod /home/tmp/hns-roce.ko"
+#ssh root@${BACK_IP} "insmod /home/tmp/hns-roce-hw-v1.ko
+
 
 #********
 #****Start : Clone roce user driver repo and build it

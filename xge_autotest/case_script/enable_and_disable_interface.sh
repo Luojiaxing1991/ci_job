@@ -186,7 +186,7 @@ function xge_continued_enable_and_disable_interface()
 
     while(($i<=10))
     do
-        ifconfig ${local_tp1} up; ifconfig ${local_tp1} ${local_tp1_ip}
+        ifconfig ${local_fibre1} up; ifconfig ${local_fibre1} ${local_fibre1_ip}
         ssh root@$BACK_IP "ifconfig ${remote_fibre1} up; ifconfig ${remote_fibre1} ${remote_fibre1_ip}; sleep 5"
         ping ${remote_fibre1_ip} -c 5 > ${HNS_TOP_DIR}/data/log/continued_enable_and_disable_interface.txt &
         sleep 10
@@ -216,7 +216,7 @@ function xge_flow_enable_and_disable_interface()
     enableok=0
     disableok=0
 
-    ifconfig ${local_tp1} up; ifconfig ${local_tp1} ${local_tp1_ip}
+    ifconfig ${local_fibre1} up; ifconfig ${local_fibre1} ${local_fibre1_ip}
     ssh root@$BACK_IP "ifconfig ${remote_fibre1} up; ifconfig ${remote_fibre1} ${remote_fibre1_ip}; sleep 5"
     ping ${remote_fibre1_ip} > ${HNS_TOP_DIR}/data/log/flow_enable_and_disable_interface.txt &
     PacketStatistics1=`ifconfig ${remote_fibre1} | grep "RX packets:" | awk -F":" '{print $2}' | awk '{print $1}'`
@@ -248,7 +248,7 @@ function xge_flow_continued_enable_and_disable_interface()
     enableok=0
     disableok=0
 
-    ifconfig ${local_tp1} up; ifconfig ${local_tp1} ${local_tp1_ip}
+    ifconfig ${local_fibre1} up; ifconfig ${local_fibre1} ${local_fibre1_ip}
     ssh root@$BACK_IP "ifconfig ${remote_fibre1} up; ifconfig ${remote_fibre1} ${remote_fibre1_ip}; sleep 5;"
     ping ${remote_fibre1_ip} > ${HNS_TOP_DIR}/data/log/flow_continued_enable_and_disable_interface.txt &
     i=1

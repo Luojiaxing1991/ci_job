@@ -1,0 +1,109 @@
+From 16239c97419cd9f32b86eaa84644914709bc1a1e Mon Sep 17 00:00:00 2001
+From: Luojiaxing1991 <luojiaxing@huawei.com>
+Date: Thu, 29 Mar 2018 12:28:15 +0000
+Subject: [PATCH] perf print
+
+fix some tarilling write
+
+a
+---
+ drivers/perf/hisilicon/hisi_uncore_l3c_v2.c | 10 ++++++++++
+ drivers/perf/hisilicon/hisi_uncore_mn_v2.c  |  9 +++++++++
+ drivers/perf/hisilicon/hisi_uncore_pmu_v2.c |  5 ++++-
+ 3 files changed, 23 insertions(+), 1 deletion(-)
+
+diff --git a/drivers/perf/hisilicon/hisi_uncore_l3c_v2.c b/drivers/perf/hisilicon/hisi_uncore_l3c_v2.c
+index 89e0fb8..e6aa7e7 100644
+--- a/drivers/perf/hisilicon/hisi_uncore_l3c_v2.c
++++ b/drivers/perf/hisilicon/hisi_uncore_l3c_v2.c
+@@ -151,6 +151,10 @@ static u64 hisi_l3c_read_counter(struct hisi_pmu_v2 *l3c_pmu, int cntr_idx)
+ 	reg_off = get_counter_reg_off(cntr_idx);
+ 	hisi_djtag_readreg(module_id, bank_sel, reg_off, client, &value);
+ 
++	/*hwj*/
++	pr_info("%s L3C_PERF_WRITE_TEST REG: %lx\n", __FUNCTION__, reg_off);
++	pr_info("%s L3C_PERF_WRITE_TEST: %lx\n", __FUNCTION__, value);
++
+ 	return value;
+ }
+ 
+@@ -260,6 +264,9 @@ static void hisi_l3c_start_counters(struct hisi_pmu_v2 *l3c_pmu)
+ 	value |= L3C_EVENT_EN;
+ 	hisi_djtag_writereg(module_id, bank_sel, L3C_EVCTRL_REG_OFF,
+ 			    value, client);
++
++	/*hwj*/
++	dump_stack();
+ }
+ 
+ static void hisi_l3c_stop_counters(struct hisi_pmu_v2 *l3c_pmu)
+@@ -278,6 +285,9 @@ static void hisi_l3c_stop_counters(struct hisi_pmu_v2 *l3c_pmu)
+ 	value &= ~(L3C_EVENT_EN);
+ 	hisi_djtag_writereg(module_id, bank_sel, L3C_EVCTRL_REG_OFF,
+ 			    value, client);
++
++	/*hwj*/
++	dump_stack();
+ }
+ 
+ static void hisi_l3c_clear_event_idx(struct hisi_pmu_v2 *l3c_pmu, int idx)
+diff --git a/drivers/perf/hisilicon/hisi_uncore_mn_v2.c b/drivers/perf/hisilicon/hisi_uncore_mn_v2.c
+index 0b4bb55..1e9df72 100644
+--- a/drivers/perf/hisilicon/hisi_uncore_mn_v2.c
++++ b/drivers/perf/hisilicon/hisi_uncore_mn_v2.c
+@@ -92,6 +92,9 @@ static u64 hisi_mn_read_counter(struct hisi_pmu_v2 *mn_pmu, int cntr_idx)
+ 	hisi_djtag_readreg(module_id, MN1_BANK_SELECT, reg_off,
+ 			   client, &value);
+ 
++	/*hwj*/
++	printk("MN_PERF_WRITE_TEST REG: %lx\n", reg_off);
++	printk("MN_PERF_WRITE_TEST: %lx\n", value);
+ 	return value;
+ }
+ 
+@@ -177,6 +180,9 @@ static void hisi_mn_start_counters(struct hisi_pmu_v2 *mn_pmu)
+ 	value |= MN1_EVENT_EN;
+ 	hisi_djtag_writereg(module_id, MN1_BANK_SELECT, MN1_EVCTRL_REG_OFF,
+ 			    value, client);
++
++	/*hwj*/
++	dump_stack();
+ }
+ 
+ static void hisi_mn_stop_counters(struct hisi_pmu_v2 *mn_pmu)
+@@ -194,6 +200,9 @@ static void hisi_mn_stop_counters(struct hisi_pmu_v2 *mn_pmu)
+ 	value &= ~(MN1_EVENT_EN);
+ 	hisi_djtag_writereg(module_id, MN1_BANK_SELECT, MN1_EVCTRL_REG_OFF,
+ 			    value, client);
++
++	/*hwj*/
++	dump_stack();
+ }
+ 
+ static void hisi_mn_clear_event_idx(struct hisi_pmu_v2 *mn_pmu, int idx)
+diff --git a/drivers/perf/hisilicon/hisi_uncore_pmu_v2.c b/drivers/perf/hisilicon/hisi_uncore_pmu_v2.c
+index 01e0a35..73de58b 100644
+--- a/drivers/perf/hisilicon/hisi_uncore_pmu_v2.c
++++ b/drivers/perf/hisilicon/hisi_uncore_pmu_v2.c
+@@ -102,6 +102,8 @@ void hisi_hrtimer_start(struct hisi_pmu_v2 *hisi_pmu)
+ 	hrtimer_start(&hisi_pmu->hrtimer,
+ 		      ms_to_ktime(hisi_pmu->hrt_duration),
+ 		      HRTIMER_MODE_REL_PINNED);
++	/*hwj,support perf test*/
++	pr_info("%s PERF_IRQ_TEST irq", __FUNCTION__);
+ }
+ 
+ void hisi_hrtimer_stop(struct hisi_pmu_v2 *hisi_pmu)
+@@ -279,7 +281,8 @@ void hisi_uncore_pmu_set_event_period_v2(struct perf_event *event)
+ 	local64_set(&hwc->prev_count, val);
+ 
+ 	/* Write start value to the hardware event counter */
+-	hisi_pmu->ops->write_counter(hisi_pmu, hwc, (u32) val);
++	/*hwj*/
++	hisi_pmu->ops->write_counter(hisi_pmu, hwc, 0xffffffffff00);
+ }
+ 
+ u64 hisi_uncore_pmu_event_update_v2(struct perf_event *event)
+-- 
+2.7.4
+

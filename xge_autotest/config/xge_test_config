@@ -10,6 +10,8 @@ TEST_CASE_FUNCTION_SWITCH=""
 #
 TEST_CASE_FUNCTION_NAME=""
 #
+TEST_CASE_NUM=""
+#
 MESSAGE=""
 
 # Test case mapping table

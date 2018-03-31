@@ -34,6 +34,7 @@ function main()
         TEST_CASE_FUNCTION_NAME=`echo "${line}" | awk -F '\t' '{print $7}'`
         TEST_CASE_FUNCTION_SWITCH=`echo "${line}" | awk -F '\t' '{print $8}'`
         TEST_CASE_TITLE=`echo "${line}" | awk -F '\t' '{print $3}'`
+        TEST_CASE_NUM=`echo "${line}" | awk -F '\t' '{print $3}'`
 
         echo "CaseInfo "${TEST_CASE_TITLE}" "$exec_script" "$TEST_CASE_FUNCTION_NAME" "$TEST_CASE_FUNCTION_SWITCH 
 
@@ -57,7 +58,7 @@ function main()
             fi
         fi
         echo -e "${line}${MESSAGE}" >> ${HNS_TOP_DIR}/${OUTPUT_TEST_DB_FILE}
-        MESSAGE=""
+        #MESSAGE=""
     done
     echo "Finish to run XGE test!"
 }

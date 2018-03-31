@@ -71,9 +71,10 @@ function ge_query_link_state()
 function ge_link_state_fault_tolerant()
 {
     Test_Case_Title="ge_link_statefault_tolerant"
-    ethtool eth10 > ${HNS_TOP_DIR}/data/log/ge_link_statefault_tolerant.txt 2>&1
-    cat ${HNS_TOP_DIR}/data/log/ge_link_statefault_tolerant.txt | grep "get link status: No such device"
-    if [ $? = 0 ];then
+    #ethtool eth10 > ${HNS_TOP_DIR}/data/log/ge_link_statefault_tolerant.txt 2>&1
+    #cat ${HNS_TOP_DIR}/data/log/ge_link_statefault_tolerant.txt | grep "get link status: No such device"
+    ethtool eth10 2>/dev/null
+    if [ $? -ne 0  ];then
         MESSAGE="PASS"
     else
         MESSAGE="FAIL\t No print error information"
