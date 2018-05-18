@@ -10,7 +10,7 @@
 <h2 id="1">Introduction</h2> 
 
 *plinth-autotest* is designed to optimize the test work of each module and improve the efficiency of each module testing.
-It is divided into three modules: SAS, HNS and PCIE and can only be runned in The openlab1.0 and openlab2.0 environment. 
+It is  divided into three modules: SAS, HNS and PCIE and can only be runned in The openlab1.0 and openlab2.0 environment. 
 After running autotest scripts, we can automatically start and connect target board, and automatically runs the test 
 cases for the modules in target boards.
 
